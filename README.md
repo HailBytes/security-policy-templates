@@ -56,6 +56,10 @@ Replace all placeholders in the templates:
 - `[Contact Info]` - Actual contact information
 - `[Primary business application]` - Your critical systems
 
+<div align="center">
+  <img src="nist.jpg" alt="Security Policy Templates" width="100%" />
+</div>
+
 ## 📊 NIST CSF Alignment
 
 These policies comprehensively address all five NIST Cybersecurity Framework functions:
@@ -69,6 +73,10 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 | **Recover (RC)** | Recovery planning, improvements | Disaster Recovery Plan, Security Response Plan |
 
 ## 💼 Implementation Approach
+
+<div align="center">
+  <img src="implementation.jpg" alt="Security Policy Templates" width="100%" />
+</div>
 
 ### Phase 1: Foundation (Weeks 1-4)
 - Deploy basic security controls
@@ -86,6 +94,10 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 - Conduct security assessments
 
 See **Implementation Guidelines** for detailed timelines, budgets, and success metrics.
+
+<div align="center">
+  <img src="audience.jpg" alt="Security Policy Templates" width="100%" />
+</div>
 
 ## 🎯 Target Audience
 

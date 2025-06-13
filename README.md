@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="header.jpg" alt="Security Policy Templates" width="100%" />
+</div>
+
+<br/>
+
 # Security Policy Templates
 
 A comprehensive collection of NIST Cybersecurity Framework (CSF) aligned security policy templates designed specifically for small to medium businesses (SMBs). These ready-to-use templates provide a structured approach to implementing essential cybersecurity policies with practical implementation guidance.

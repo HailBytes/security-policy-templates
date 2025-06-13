@@ -56,11 +56,13 @@ Replace all placeholders in the templates:
 - `[Contact Info]` - Actual contact information
 - `[Primary business application]` - Your critical systems
 
+
+
+## 📊 NIST CSF Alignment
+
 <div align="center">
   <img src="nist.jpg" alt="Security Policy Templates" width="100%" />
 </div>
-
-## 📊 NIST CSF Alignment
 
 These policies comprehensively address all five NIST Cybersecurity Framework functions:
 
@@ -95,11 +97,12 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 
 See **Implementation Guidelines** for detailed timelines, budgets, and success metrics.
 
+
+## 🎯 Target Audience
+
 <div align="center">
   <img src="audience.jpg" alt="Security Policy Templates" width="100%" />
 </div>
-
-## 🎯 Target Audience
 
 ### Small Businesses (1-25 employees)
 - Essential security controls

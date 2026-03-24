@@ -79,3 +79,9 @@ Applies to all passwords used to access company systems, applications, and servi
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.PT (Protective Technology)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

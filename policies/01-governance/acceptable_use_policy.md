@@ -38,3 +38,9 @@ Violations may result in disciplinary action up to and including termination and
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), DE.CM (Security Continuous Monitoring)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

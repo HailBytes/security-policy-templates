@@ -156,3 +156,9 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security), PR.IP (Information Protection), PR.MA (Maintenance), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring), DE.AE (Anomalies and Events)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

@@ -56,3 +56,9 @@ Applies to all email communications using company email systems or personal emai
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security), DE.AE (Anomalies and Events)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

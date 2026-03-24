@@ -56,3 +56,9 @@ The disaster recovery plan is activated when:
 
 ## References
 - NIST CSF v1.1: ID.BE (Business Environment), PR.IP (Information Protection), RC (Recover)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

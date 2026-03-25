@@ -116,3 +116,9 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 
 ## References
 - NIST CSF v1.1: DE (Detect), RS (Respond), RC (Recover)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

@@ -54,3 +54,9 @@ Applies to all suspected or confirmed data breaches involving company or custome
 
 ## References
 - NIST CSF v1.1: DE.AE (Anomalies and Events), RS (Respond), RC (Recover)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

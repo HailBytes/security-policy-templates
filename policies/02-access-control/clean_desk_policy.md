@@ -40,3 +40,9 @@ Applies to all employees and contractors working in company facilities or remote
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

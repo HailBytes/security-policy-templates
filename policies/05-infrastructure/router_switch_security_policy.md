@@ -92,3 +92,9 @@ Applies to all routers, switches, and network infrastructure devices in company 
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

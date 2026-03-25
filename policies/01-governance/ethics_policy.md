@@ -64,3 +64,9 @@ Applies to all employees, contractors, and business partners with access to comp
 
 ## References
 - NIST CSF v1.1: ID.GV (Governance), PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security)
+
+## Version History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | [Date] | [Security Officer] | Initial release |

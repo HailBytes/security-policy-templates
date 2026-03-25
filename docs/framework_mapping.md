@@ -201,6 +201,18 @@ This document maps each [Company Name] security policy template to controls acro
 
 ---
 
+### 18. AI Usage and Governance Policy *(new)*
+
+| Framework | Applicable Controls |
+|-----------|-------------------|
+| NIST CSF | ID.AM-2, ID.GV-1, ID.GV-3, ID.SC-1, ID.SC-2, ID.SC-4, ID.RA-1, PR.AC-4, PR.AC-6, PR.DS-1, PR.DS-5, PR.AT-1, DE.CM-1, DE.AE-3 |
+| CIS Controls v8 | CIS 2 (Inventory and Control of Software Assets — AI tools), CIS 3 (Data Protection — AI data handling), CIS 14 (Security Awareness — AI threats), CIS 15 (Service Provider Management — AI vendors and MCP publishers), CIS 16 (Application Software Security — AI-generated code) |
+| ISO 27001:2022 | A.5.1 (Policies for information security), A.5.10 (Acceptable use), A.5.23 (Information security for use of cloud services — applies to cloud AI APIs), A.6.3 (Information security awareness — AI threats), A.8.25 (Secure development life cycle — AI/ML models), A.8.26 (Application security requirements — LLM applications) |
+| SOC 2 TSC | CC6.1 (Logical access — AI agent permissions), CC6.7 (Transmission controls — AI API calls), CC9.2 (Vendor risk — AI providers and MCP publishers), CC3.2 (Risk identification — AI and agent risks) |
+| NIST AI RMF | GOVERN 1 (Policies and accountability), MAP 1 (AI risk categorization), MEASURE 2 (AI risk analysis), MANAGE 1 (AI risk treatment) |
+
+---
+
 ## Framework Comparison Summary
 
 | Framework | Focus | Best For | Assessment Type |
@@ -232,6 +244,8 @@ Use the table below to identify which frameworks your organization is targeting 
 | ISO 27001 | A.6.7 | Remote Working | Remote Work / BYOD Policy | | |
 | ISO 27001 | A.8.8 | Vulnerability Management | Vulnerability Management Policy | | |
 | ISO 27001 | A.8.32 | Change Management | Change Management Policy | | |
+| ISO 27001 | A.5.10 / A.8.26 | Acceptable Use / AI Security | AI Usage and Governance Policy | | |
+| NIST AI RMF | GOVERN 1–6 | AI Governance | AI Usage and Governance Policy | | |
 | SOC 2 | CC6 | Logical and Physical Access | Multiple policies | | |
 | SOC 2 | CC7 | System Operations | Incident Response, Vulnerability Mgmt | | |
 | SOC 2 | CC8 | Change Management | Change Management Policy | | |

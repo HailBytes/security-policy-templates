@@ -189,11 +189,73 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Security awareness improvement
 - Risk reduction measurements
 
+---
+
+## 🗺️ Mapped to Enterprise Frameworks
+
+These policy templates are pre-mapped to the major compliance frameworks used in enterprise procurement and regulatory audits. Full control-level mappings are in the [`/mappings`](./mappings/) directory.
+
+| Policy | ISO 27001:2022 | NIST CSF | SOC 2 | LGPD | BACEN 4893 |
+|--------|---------------|----------|-------|------|------------|
+| [Acceptable Use](policies/01-governance/acceptable_use_policy.md) | 5.1, 5.10 | ID.AM, PR.AT | CC1.1, CC6.1 | Art. 46 | Art. 4 |
+| [Password Protection](policies/02-access-control/password_protection_policy.md) | 5.15–5.18, 8.5 | PR.AC | CC6.1, CC6.3 | Art. 46 | Art. 4 |
+| [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 46 | — |
+| [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 46 | Art. 4 |
+| [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+| [Data Breach Response](policies/04-incident-response/data_breach_response_policy.md) | 5.24–5.26 | RS.CO, RS.AN | CC7.3, CC7.4 | Art. 48 | Art. 11 |
+| [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 48 | Art. 11 |
+| [Disaster Recovery](policies/06-continuity/disaster_recovery_plan_policy.md) | 5.30, 8.13 | RC.RP | A1.2, A1.3 | Art. 46 | Art. 6 |
+| [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 46 | Art. 4 |
+| [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 46 | Art. 4, 5 |
+| [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5 |
+| [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7 |
+| [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
+| [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
+| [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+
+> **Full clause-level mappings** → [`/mappings`](./mappings/) directory
+
+---
+
 ## 🌎 LatAm Compliance
 
 Operating in Brazil, Mexico, or Argentina? See the companion repository for jurisdiction-specific compliance mappings:
 
 **[HailBytes LatAm Compliance Mappings](https://github.com/HailBytes/latam-compliance-mappings)** — How HailBytes SAT and ASM map to LGPD, BACEN 4.893, LFPDPPP, and more. Includes PT-BR document templates (DPA, Incident Response Runbook, Vendor Risk Assessment).
+
+---
+
+## 🏢 Need Help Operationalizing These Policies?
+
+Templates are a starting point. Enterprise buyers — and the auditors behind them — require evidence of *implementation*, not just documentation.
+
+**HailBytes ships these policies pre-mapped to our Security Awareness Training (SAT) and Attack Surface Management (ASM) platforms**, with a SOC 2 roadmap and enterprise trust package available on request. This stack is purpose-built for organizations moving from SMB-grade policy documents to enterprise-ready compliance attestation.
+
+- Policies pre-integrated with NIST CSF and SOC 2 control dashboards
+- Continuous control monitoring via Attack Surface Management
+- Staff training modules tied directly to each policy (with completion tracking)
+- SOC 2 Type II readiness roadmap included for qualifying accounts
+- LGPD and BACEN 4893 alignment for Brazil-market enterprise deals
+
+> **Ready to move from templates to attestation?**  
+> [Request an enterprise trust package →](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust)  
+> [Book a 30-minute compliance scoping call →](https://hailbytes.com/contact?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust)
+
+---
+
+## 📥 Free: Enterprise Compliance Roadmap
+
+**From SMB policies → SOC 2 → enterprise readiness.** One-page PDF covering the milestones, common gaps, and what enterprise procurement teams actually check before signing.
+
+Includes:
+- The 4 gaps that kill enterprise deals before security review even starts
+- How to sequence SOC 2 Type II prep without a full-time GRC hire
+- What financial institutions, healthcare networks, and government contractors ask for in vendor security reviews
+- How to map these templates to a defensible audit evidence package in 90 days
+
+> [Download the Enterprise Compliance Roadmap — free, email required →](https://hailbytes.com/compliance-roadmap?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust)
+
+---
 
 ## 🤝 Contributing
 
@@ -223,3 +285,19 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 ---
 
 **Start securing your business today with these practical, proven security policy templates.**
+
+---
+
+<div align="center">
+
+### Enterprise Security & Compliance — Powered by HailBytes
+
+**These templates are the foundation. HailBytes is the partner who operationalizes them.**
+
+Trusted by enterprise security teams for Security Awareness Training (SAT), Attack Surface Management (ASM), and end-to-end compliance program delivery — including SOC 2 attestation, ISO 27001 readiness, and LGPD / BACEN alignment for Brazil-market deals.
+
+[SOC 2 Readiness](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust-banner) · [ISO 27001](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust-banner) · [LGPD / BACEN Compliance](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust-banner) · [Enterprise Trust Package](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust-banner)
+
+[![HailBytes Enterprise Trust Package](https://img.shields.io/badge/HailBytes-Enterprise%20Trust%20Package-0066cc?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVMMTIgMXoiLz48L3N2Zz4=)](https://hailbytes.com/enterprise?utm_source=github&utm_medium=readme&utm_campaign=enterprise-trust-banner)
+
+</div>

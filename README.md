@@ -222,7 +222,7 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 
 ## Enterprise Support
 
-[![HailBytes - Enterprise Security](https://www.hailbytes.com/hubfs/HailBytes-GitHub-Enterprise-Banner.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-policy-templates&utm_content=enterprise_banner)
+[![HailBytes - Enterprise Security](https://hailbytes.com/images/icons/hb_hb_white_horizontal.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-policy-templates&utm_content=enterprise_banner)
 
 Need SOC 2-ready managed security tooling for your compliance roadmap? **HailBytes** delivers BYOC-deployed security platforms with enterprise trust documentation.
 

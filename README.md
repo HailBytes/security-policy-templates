@@ -8,11 +8,11 @@
 
 A comprehensive collection of NIST Cybersecurity Framework (CSF) aligned security policy templates designed specifically for small to medium businesses (SMBs). These ready-to-use templates provide a structured approach to implementing essential cybersecurity policies with practical implementation guidance.
 
-## 🎯 Purpose
+## Purpose
 
 These policy templates help SMBs establish robust cybersecurity frameworks without the complexity typically associated with enterprise-grade security programs. Each policy is mapped to NIST CSF functions and includes practical implementation guidance tailored for resource-constrained environments.
 
-## 📋 What's Included
+## What's Included
 
 ### Core Security Policies
 - **Acceptable Use Policy** - Guidelines for appropriate IT resource usage
@@ -34,7 +34,7 @@ These policy templates help SMBs establish robust cybersecurity frameworks witho
 - **Ethics Policy** - Information ethics and responsible technology use
 - **Implementation Guidelines** - Detailed deployment roadmap with timelines and budgets
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Assessment & Prioritization
 Start with the **Implementation Guidelines** document to:
@@ -45,7 +45,7 @@ Start with the **Implementation Guidelines** document to:
 ### 2. High Priority Policies (Weeks 1-4)
 Begin with these foundational policies:
 1. Password Protection Policy
-2. Data Breach Response Policy  
+2. Data Breach Response Policy
 3. Email Policy
 4. Acceptable Use Policy
 
@@ -56,9 +56,7 @@ Replace all placeholders in the templates:
 - `[Contact Info]` - Actual contact information
 - `[Primary business application]` - Your critical systems
 
-
-
-## 📊 NIST CSF Alignment
+## NIST CSF Alignment
 
 <div align="center">
   <img src="nist.jpg" alt="Security Policy Templates" width="100%" />
@@ -74,7 +72,7 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 | **Respond (RS)** | Response planning, communications, analysis | Data Breach Response, Security Response Plan |
 | **Recover (RC)** | Recovery planning, improvements | Disaster Recovery Plan, Security Response Plan |
 
-## 💼 Implementation Approach
+## Implementation Approach
 
 <div align="center">
   <img src="implementation.jpg" alt="Security Policy Templates" width="100%" />
@@ -97,8 +95,7 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 
 See **Implementation Guidelines** for detailed timelines, budgets, and success metrics.
 
-
-## 🎯 Target Audience
+## Target Audience
 
 <div align="center">
   <img src="audience.jpg" alt="Security Policy Templates" width="100%" />
@@ -119,7 +116,7 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Advanced threat detection and response
 - Regulatory compliance preparation
 
-## 🛠️ Customization Guidance
+## Customization Guidance
 
 ### Technical Adaptations
 - Adjust password complexity based on current capabilities
@@ -135,11 +132,11 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 
 ### Industry-Specific Considerations
 - **Healthcare**: Add HIPAA compliance requirements
-- **Financial**: Include PCI DSS or SOX requirements  
+- **Financial**: Include PCI DSS or SOX requirements
 - **Government Contractors**: Incorporate NIST 800-171 controls
 - **International**: Address GDPR or regional data protection laws
 
-## 📈 Expected Outcomes
+## Expected Outcomes
 
 ### Short-term (3-6 months)
 - Reduced security incident frequency
@@ -159,7 +156,7 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Business resilience improvement
 - Competitive advantage through security
 
-## 📚 Training Resources
+## Training Resources
 
 ### Executive Training
 - Business risk and impact overview
@@ -176,7 +173,7 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Policy compliance requirements
 - Incident recognition and reporting
 
-## 🔍 Compliance & Auditing
+## Compliance & Auditing
 
 ### Regular Assessment Schedule
 - **Monthly**: Access control and basic compliance checks
@@ -189,7 +186,7 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Security awareness improvement
 - Risk reduction measurements
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to improve these policy templates:
 - Submit issues for unclear guidance or missing elements
@@ -197,18 +194,18 @@ We welcome contributions to improve these policy templates:
 - Share industry-specific adaptations
 - Provide feedback on implementation effectiveness
 
-## 📄 License
+## License
 
 This project is licensed under the Mozilla Public License 2.0 - see the LICENSE file for details.
 
-## ⚠️ Important Notes
+## Important Notes
 
 - These templates provide guidance but may require legal review for your jurisdiction
 - Customize all policies to match your specific business environment
 - Regular updates are essential as threats and regulations evolve
 - Consider professional security consultation for complex environments
 
-## 🆘 Support
+## Support
 
 - Review the Implementation Guidelines for detailed deployment guidance
 - Check the Issues section for common implementation questions
@@ -226,4 +223,4 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 
 Need SOC 2-ready managed security tooling for your compliance roadmap? **HailBytes** delivers BYOC-deployed security platforms with enterprise trust documentation.
 
-[**Get Enterprise Support →**](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-policy-templates&utm_content=enterprise_banner)
+[**Get Enterprise Support ->**](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-policy-templates&utm_content=enterprise_banner)

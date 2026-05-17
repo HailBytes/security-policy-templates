@@ -189,6 +189,12 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 - Security awareness improvement
 - Risk reduction measurements
 
+## 🌎 LatAm Compliance
+
+Operating in Brazil, Mexico, or Argentina? See the companion repository for jurisdiction-specific compliance mappings:
+
+**[HailBytes LatAm Compliance Mappings](https://github.com/HailBytes/latam-compliance-mappings)** — How HailBytes SAT and ASM map to LGPD, BACEN 4.893, LFPDPPP, and more. Includes PT-BR document templates (DPA, Incident Response Runbook, Vendor Risk Assessment).
+
 ## 🤝 Contributing
 
 We welcome contributions to improve these policy templates:

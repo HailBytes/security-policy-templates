@@ -199,18 +199,20 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 | [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 46 | — |
 | [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 46 | Art. 4 |
 | [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 6, 46 | Art. 4 |
-| [Data Breach Response](policies/04-incident-response/data_breach_response_policy.md) | 5.24–5.26 | RS.CO, RS.AN | CC7.3, CC7.4 | Art. 48 | Art. 11 |
-| [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 48 | Art. 11 |
+| [Data Breach Response](policies/04-incident-response/data_breach_response_policy.md) | 5.24–5.26 | RS.CO, RS.AN | CC7.3, CC7.4 | Art. 48 | Art. 12–13 |
+| [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 48 | Art. 12–13 |
 | [Disaster Recovery](policies/06-continuity/disaster_recovery_plan_policy.md) | 5.30, 8.13 | RC.RP | A1.2, A1.3 | Art. 46 | Art. 6 |
 | [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 46 | Art. 4 |
 | [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 46 | Art. 4, 5 |
-| [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5 |
-| [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7 |
+| [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5, 6 |
+| [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7, 14 |
 | [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
 | [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
 | [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
 
 > **Full clause-level mappings** → [`/mappings`](./mappings/) directory
+>
+> **Note on BACEN article numbers:** The 72-hour incident-notification clock under BACEN Res. 4.893/2021 lives in Articles 12 and 13, not Article 11. The data-breach and security-response rows above were corrected on 2026-05-18.
 
 ---
 

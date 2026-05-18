@@ -75,7 +75,7 @@ These articles impose the most direct technical and organizational security requ
 | `policies/04-incident-response/data_breach_response_policy.md` | Breach detection, assessment, and ANPD notification procedures |
 | `policies/04-incident-response/security_response_plan_policy.md` | Incident escalation to enable timely regulatory notification |
 
-> **ANPD Guidance:** The ANPD Resolution CD/ANPD No. 15/2024 requires notification within **3 working days** of becoming aware of a high-risk incident. Update your Data Breach Response Policy placeholder timelines to reflect this.
+> **ANPD Guidance:** ANPD Resolution CD/ANPD No. 15/2024 (which re-issued and updated the procedures previously in Res. CD/ANPD No. 15/2023) requires preliminary notification within **3 business days** (*3 dias úteis*) of becoming aware of a high-risk incident, with a supplementary report within the ANPD-specified deadline thereafter. Update your Data Breach Response Policy placeholder timelines to reflect this.
 
 ### Article 49 — Security by Design
 *Systems used for personal data processing must be designed from the ground up to meet security requirements and data protection standards.*
@@ -129,14 +129,15 @@ BACEN 4,893/2021 applies to financial institutions, payment institutions, and ot
 | `policies/04-incident-response/security_response_plan_policy.md` | Incident response procedures (Art. 5 V) |
 | `policies/01-governance/change_management_policy.md` | Controlled system changes (Art. 5 VI) |
 
-### Article 6 — Business Continuity
-*Institutions must maintain a business continuity plan for cyber incidents.*
+### Article 6 — Testing & Monitoring (vulnerability assessment cadence)
+*Institutions must implement mechanisms for testing and monitoring systems for vulnerability, including periodic penetration tests.*
 
 | Policy File | Art. 6 Requirement Satisfied |
 |-------------|------------------------------|
-| `policies/06-continuity/disaster_recovery_plan_policy.md` | Cyber incident recovery procedures and RTO/RPO objectives |
+| `policies/05-infrastructure/vulnerability_patch_management_policy.md` | Continuous vulnerability scanning and risk-tiered remediation |
+| `policies/06-continuity/disaster_recovery_plan_policy.md` | Resilience testing as part of the cyber-recovery posture |
 
-### Article 7 — Third-Party Services (Cloud)
+### Article 7 — Third-Party / Cloud Risk Assessment
 *Institutions must assess cybersecurity risks in contracted cloud services and data processing.*
 
 | Policy File | Art. 7 Requirement Satisfied |
@@ -144,13 +145,30 @@ BACEN 4,893/2021 applies to financial institutions, payment institutions, and ot
 | `policies/01-governance/vendor_third_party_risk_policy.md` | Third-party cloud service risk assessment and contractual requirements |
 | `policies/05-infrastructure/cloud_security_policy.md` | Cloud-specific security controls and provider assessment |
 
-### Article 11 — Incident Reporting
-*Incidents with potential systemic impact must be reported to BACEN within defined timeframes.*
+### Articles 12–13 — Relevant-Incident Classification & 72-Hour BCB Notification
+*Articles 12 and 13 together establish the obligation to classify cybersecurity incidents as 'relevant' (`incidentes relevantes`) and to notify the Banco Central do Brasil within 72 hours of becoming aware of a relevant incident.*
 
-| Policy File | Art. 11 Requirement Satisfied |
+| Policy File | Art. 12–13 Requirement Satisfied |
+|-------------|----------------------------------|
+| `policies/04-incident-response/data_breach_response_policy.md` | Regulatory notification procedures including BCB reporting obligations and the 72-hour deadline |
+| `policies/04-incident-response/security_response_plan_policy.md` | Incident severity classification enabling the Art. 12 `incidente relevante` threshold assessment |
+
+> **Note:** Earlier revisions of this mapping referenced “BACEN Art. 11 — Incident Reporting.” Art. 11 of Res. 4.893 governs cloud-service oversight; the 72-hour incident-notification clock lives in Arts. 12–13. This was corrected on 2026-05-18.
+
+### Article 14 — Third-Party Contracts (Audit Rights, Breach Notification)
+*Contracts with technology service providers must include security standards and audit rights for the institution and for BCB.*
+
+| Policy File | Art. 14 Requirement Satisfied |
 |-------------|-------------------------------|
-| `policies/04-incident-response/data_breach_response_policy.md` | Regulatory notification procedures including BACEN reporting obligations |
-| `policies/04-incident-response/security_response_plan_policy.md` | Incident severity classification enabling Art. 11 threshold assessment |
+| `policies/01-governance/vendor_third_party_risk_policy.md` | Contractual security clauses, audit rights, and breach-notification obligations for vendors |
+
+### Article 17 — Annual Board Report
+*The institution must prepare an annual cybersecurity report covering incidents, tests, and improvement plans for the Board of Directors.*
+
+| Policy File | Art. 17 Requirement Satisfied |
+|-------------|-------------------------------|
+| `policies/01-governance/change_management_policy.md` | Documented change cadence feeds the annual improvement-plan section |
+| `policies/05-infrastructure/vulnerability_patch_management_policy.md` | Vulnerability-testing results feed the annual report |
 
 ---
 
@@ -165,7 +183,7 @@ For organizations operating across Latin America, note the following additional 
 | Colombia | Law 1581/2012 (Habeas Data) | Authorization-based; SIC as supervisory authority |
 | Chile | Law 19,628 + 2024 Reform (Law 21,719) | 2024 reform closely mirrors LGPD structure |
 
-> **Full LATAM mapping matrix** → [HailBytes/latam-compliance-mappings](https://github.com/HailBytes/latam-compliance-mappings) *(coming soon)*
+> **Full LATAM mapping matrix** → [HailBytes/latam-compliance-mappings](https://github.com/HailBytes/latam-compliance-mappings)
 
 ---
 

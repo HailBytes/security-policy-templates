@@ -12,6 +12,8 @@
 #   --review-date  "2026-01-15"           [Review Date]    (YYYY-MM-DD)
 #   --department   "Information Security" [Department]
 #   --industry     "Healthcare"           [Industry]
+#   --title-role   "IT Manager"           [Title/Role]     (incident response team roles)
+#   --legal-contact "legal@example.com"   [Contact Info]   (legal counsel contact)
 #   --output-dir   "./customized"         Directory to write customized files to
 #                                         (default: overwrites files in place)
 #   --dry-run                             Preview replacements without writing files
@@ -30,6 +32,8 @@
 #     --review-date "2026-01-15" \
 #     --department "Information Technology" \
 #     --industry "Finance" \
+#     --title-role "IT Manager" \
+#     --legal-contact "legal@acme.com" \
 #     --output-dir "./customized"
 #
 #   # Overwrite files in place (make sure you have a git backup!):
@@ -49,6 +53,8 @@ SEC_OFFICER=""
 REVIEW_DATE=""
 DEPARTMENT=""
 INDUSTRY=""
+TITLE_ROLE=""
+LEGAL_CONTACT=""
 OUTPUT_DIR=""
 DRY_RUN=false
 
@@ -74,8 +80,10 @@ while [[ $# -gt 0 ]]; do
     --sec-officer)  SEC_OFFICER="$2";  shift 2 ;;
     --review-date)  REVIEW_DATE="$2";  shift 2 ;;
     --department)   DEPARTMENT="$2";   shift 2 ;;
-    --industry)     INDUSTRY="$2";     shift 2 ;;
-    --output-dir)   OUTPUT_DIR="$2";   shift 2 ;;
+    --industry)       INDUSTRY="$2";       shift 2 ;;
+    --title-role)     TITLE_ROLE="$2";     shift 2 ;;
+    --legal-contact)  LEGAL_CONTACT="$2";  shift 2 ;;
+    --output-dir)     OUTPUT_DIR="$2";     shift 2 ;;
     --dry-run)      DRY_RUN=true;      shift   ;;
     --help|-h)      usage ;;
     *) echo -e "${RED}Unknown option: $1${RESET}" >&2; usage ;;
@@ -88,7 +96,8 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # ─── Validate inputs ─────────────────────────────────────────────────────────
 if [[ -z "$COMPANY" && -z "$DATE" && -z "$IT_CONTACT" && -z "$SEC_OFFICER" && \
-      -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" ]]; then
+      -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" && \
+      -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" ]]; then
   echo -e "${YELLOW}Warning: No replacement values provided. Nothing to do.${RESET}"
   echo "Run with --help to see usage."
   exit 0
@@ -137,13 +146,15 @@ build_sed_args() {
     printf '%s' "$1" | sed 's/[&/\]/\\&/g'
   }
 
-  [[ -n "$COMPANY" ]]     && args+=(-e "s/\[Company Name\]/$(escape_replace "$COMPANY")/g")
-  [[ -n "$DATE" ]]        && args+=(-e "s/\[Date\]/$(escape_replace "$DATE")/g")
-  [[ -n "$IT_CONTACT" ]]  && args+=(-e "s/\[IT Contact\]/$(escape_replace "$IT_CONTACT")/g")
-  [[ -n "$SEC_OFFICER" ]] && args+=(-e "s/\[Security Officer\]/$(escape_replace "$SEC_OFFICER")/g")
-  [[ -n "$REVIEW_DATE" ]] && args+=(-e "s/\[Review Date\]/$(escape_replace "$REVIEW_DATE")/g")
-  [[ -n "$DEPARTMENT" ]]  && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
-  [[ -n "$INDUSTRY" ]]    && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
+  [[ -n "$COMPANY" ]]       && args+=(-e "s/\[Company Name\]/$(escape_replace "$COMPANY")/g")
+  [[ -n "$DATE" ]]          && args+=(-e "s/\[Date\]/$(escape_replace "$DATE")/g")
+  [[ -n "$IT_CONTACT" ]]    && args+=(-e "s/\[IT Contact\]/$(escape_replace "$IT_CONTACT")/g")
+  [[ -n "$SEC_OFFICER" ]]   && args+=(-e "s/\[Security Officer\]/$(escape_replace "$SEC_OFFICER")/g")
+  [[ -n "$REVIEW_DATE" ]]   && args+=(-e "s/\[Review Date\]/$(escape_replace "$REVIEW_DATE")/g")
+  [[ -n "$DEPARTMENT" ]]    && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
+  [[ -n "$INDUSTRY" ]]      && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
+  [[ -n "$TITLE_ROLE" ]]    && args+=(-e "s/\[Title\/Role\]/$(escape_replace "$TITLE_ROLE")/g")
+  [[ -n "$LEGAL_CONTACT" ]] && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
 
   printf '%s\n' "${args[@]}"
 }
@@ -157,13 +168,15 @@ if [[ ${#SED_ARGS[@]} -eq 0 ]]; then
 fi
 
 echo "Replacements configured:"
-[[ -n "$COMPANY" ]]     && echo "  [Company Name]     → $COMPANY"
-[[ -n "$DATE" ]]        && echo "  [Date]             → $DATE"
-[[ -n "$IT_CONTACT" ]]  && echo "  [IT Contact]       → $IT_CONTACT"
-[[ -n "$SEC_OFFICER" ]] && echo "  [Security Officer] → $SEC_OFFICER"
-[[ -n "$REVIEW_DATE" ]] && echo "  [Review Date]      → $REVIEW_DATE"
-[[ -n "$DEPARTMENT" ]]  && echo "  [Department]       → $DEPARTMENT"
-[[ -n "$INDUSTRY" ]]    && echo "  [Industry]         → $INDUSTRY"
+[[ -n "$COMPANY" ]]       && echo "  [Company Name]     → $COMPANY"
+[[ -n "$DATE" ]]          && echo "  [Date]             → $DATE"
+[[ -n "$IT_CONTACT" ]]    && echo "  [IT Contact]       → $IT_CONTACT"
+[[ -n "$SEC_OFFICER" ]]   && echo "  [Security Officer] → $SEC_OFFICER"
+[[ -n "$REVIEW_DATE" ]]   && echo "  [Review Date]      → $REVIEW_DATE"
+[[ -n "$DEPARTMENT" ]]    && echo "  [Department]       → $DEPARTMENT"
+[[ -n "$INDUSTRY" ]]      && echo "  [Industry]         → $INDUSTRY"
+[[ -n "$TITLE_ROLE" ]]    && echo "  [Title/Role]       → $TITLE_ROLE"
+[[ -n "$LEGAL_CONTACT" ]] && echo "  [Contact Info]     → $LEGAL_CONTACT"
 echo ""
 
 # ─── Setup output directory ──────────────────────────────────────────────────
@@ -184,7 +197,7 @@ for src_file in "${TARGET_FILES[@]}"; do
   rel_path="${src_file#${REPO_ROOT}/}"
 
   # Check if file contains any of our placeholders
-  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry)\]' "$src_file" 2>/dev/null; then
+  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' "$src_file" 2>/dev/null; then
     $DRY_RUN && echo "  [skip] $rel_path (no placeholders found)"
     (( SKIPPED_COUNT++ )) || true
     continue
@@ -243,7 +256,7 @@ if ! $DRY_RUN; then
   [[ -n "$OUTPUT_DIR" ]] && REMAINING_DIRS=("$OUTPUT_DIR")
 
   remaining=$(grep -rn --include="*.md" \
-    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry)\]' \
+    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' \
     "${REMAINING_DIRS[@]}" 2>/dev/null || true)
 
   if [[ -n "$remaining" ]]; then

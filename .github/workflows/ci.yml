@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+
+jobs:
+  shellcheck:
+    name: Lint shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: "./scripts"
+
+  placeholder-audit:
+    name: Placeholder coverage audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for unhandled placeholders
+        run: |
+          # Every bracketed token found in policy/template files
+          all=$(grep -roh --include="*.md" \
+                  '\[[A-Za-z /][^]]*\]' \
+                  policies/ templates/ industry-variants/ docs/ 2>/dev/null \
+                | sort -u)
+
+          # Tokens that customize.sh knows how to replace
+          handled=$(grep -oP '\\\\?\[.*?\\\\?\]' scripts/customize.sh \
+                    | tr -d '\\' | sort -u)
+
+          # Tokens that appear in the files but are NOT in the script
+          unhandled=$(comm -23 \
+                        <(echo "$all") \
+                        <(echo "$handled"))
+
+          if [[ -n "$unhandled" ]]; then
+            echo "::warning::The following placeholders are present in policy files but have no"
+            echo "::warning::corresponding substitution in scripts/customize.sh:"
+            echo "$unhandled" | while read -r token; do
+              echo "  $token"
+            done
+            echo ""
+            echo "Add a --flag and sed substitution to scripts/customize.sh for each one."
+            exit 1
+          fi
+
+          echo "All placeholders are handled by customize.sh."

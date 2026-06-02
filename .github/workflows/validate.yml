@@ -1,0 +1,133 @@
+name: Validate Policy Templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-structure:
+    name: Policy Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required sections in every policy
+        run: |
+          set -euo pipefail
+          FAIL=0
+
+          for file in policies/**/*.md; do
+            missing=""
+
+            grep -q '^## Purpose'           "$file" || missing+=" Purpose"
+            grep -q '^## Scope'             "$file" || missing+=" Scope"
+            grep -q '^## References'        "$file" || missing+=" References"
+            grep -q '^## Version History'   "$file" || missing+=" VersionHistory"
+            grep -q 'NIST CSF Functions:'   "$file" || missing+=" NistFunctionsHeader"
+            grep -qE '\(NIST CSF: [A-Z]{2}\.' "$file" || missing+=" NistSubcategoryInBody"
+
+            if [[ -n "$missing" ]]; then
+              echo "::error file=$file::Missing required sections:$missing"
+              FAIL=1
+            fi
+          done
+
+          [[ $FAIL -eq 0 ]] || exit 1
+
+  validate-placeholders:
+    name: Placeholder Conventions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect non-standard placeholder casing in policies
+        run: |
+          set -euo pipefail
+          # CONTRIBUTING.md mandates Title Case inside brackets.
+          # Catch common mistakes: all-lowercase or all-uppercase
+          # placeholders for the nine documented fields.
+          PATTERNS=(
+            '\[company name\]'
+            '\[COMPANY NAME\]'
+            '\[security officer\]'
+            '\[SECURITY OFFICER\]'
+            '\[it contact\]'
+            '\[IT CONTACT\]'
+            '\[review date\]'
+            '\[REVIEW DATE\]'
+            '\[department\]'
+            '\[DEPARTMENT\]'
+            '\[industry\]'
+            '\[INDUSTRY\]'
+            '\[title/role\]'
+            '\[TITLE/ROLE\]'
+            '\[contact info\]'
+            '\[CONTACT INFO\]'
+          )
+          FAIL=0
+          for pat in "${PATTERNS[@]}"; do
+            hits=$(grep -rniE "$pat" policies/ templates/ industry-variants/ docs/ 2>/dev/null || true)
+            if [[ -n "$hits" ]]; then
+              while IFS= read -r line; do
+                echo "::warning::Wrong-case placeholder ($pat): $line"
+              done <<< "$hits"
+              FAIL=1
+            fi
+          done
+          [[ $FAIL -eq 0 ]] || exit 1
+
+  test-customize-script:
+    name: customize.sh dry-run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run customize.sh --dry-run with sample values
+        run: |
+          chmod +x scripts/customize.sh
+          ./scripts/customize.sh \
+            --company     "Acme Corp" \
+            --date        "2025-01-01" \
+            --it-contact  "it@acme.com" \
+            --sec-officer "Jane Smith, CISO" \
+            --review-date "2026-01-01" \
+            --department  "Information Security" \
+            --industry    "Technology" \
+            --title-role  "IT Manager" \
+            --legal-contact "legal@acme.com" \
+            --dry-run
+
+      - name: Run customize.sh to output directory and check no errors
+        run: |
+          ./scripts/customize.sh \
+            --company     "Acme Corp" \
+            --date        "2025-01-01" \
+            --it-contact  "it@acme.com" \
+            --sec-officer "Jane Smith, CISO" \
+            --review-date "2026-01-01" \
+            --department  "Information Security" \
+            --industry    "Technology" \
+            --title-role  "IT Manager" \
+            --legal-contact "legal@acme.com" \
+            --output-dir  "/tmp/customized"
+
+          # Confirm the most common placeholder was actually replaced
+          if grep -rqF '[Company Name]' /tmp/customized/; then
+            echo "::error::customize.sh left [Company Name] placeholders unreplaced"
+            exit 1
+          fi
+
+  check-merge-conflicts:
+    name: No Conflict Markers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reject files containing Git conflict markers
+        run: |
+          if grep -rn '^<<<<<<< \|^=======$\|^>>>>>>> ' policies/ templates/ docs/ industry-variants/ 2>/dev/null; then
+            echo "::error::Unresolved Git conflict markers found"
+            exit 1
+          fi

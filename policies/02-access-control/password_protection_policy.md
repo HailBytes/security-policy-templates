@@ -10,13 +10,20 @@ Applies to all passwords used to access company systems, applications, and servi
 
 ## Password Requirements
 
-### 7.1 Password Complexity *(NIST CSF: PR.AC-1, PR.AC-7)*
-**Minimum Requirements:**
+### 7.1 Password Requirements *(NIST CSF: PR.AC-1, PR.AC-7)*
+**Minimum Length (primary control):**
 - Minimum 12 characters for regular accounts
 - Minimum 15 characters for administrative accounts
-- Combination of uppercase, lowercase, numbers, and special characters
-- No dictionary words, personal information, or predictable patterns
-- No reuse of last 12 passwords
+- Passphrases of 4 or more random words (≥ 20 characters) are an equally acceptable alternative and are encouraged per NIST SP 800-63B
+
+**Complexity (secondary control — apply only when your platform enforces it):**
+- Where complexity rules are required by your authentication system or a compliance framework, require a mix of uppercase, lowercase, numbers, and special characters
+- Note: NIST SP 800-63B recommends *against* mandatory character-class rules for user-chosen passwords because they drive predictable substitutions (e.g., P@ssw0rd1!); favour length and breach screening instead
+
+**Prohibited patterns:**
+- No personal information (names, birthdays, username) or predictable patterns (Season+Year, CompanyName+Number, etc.)
+- No reuse of the last 12 passwords
+- New passwords must be screened against known breached-password databases at enrollment and reset (e.g., check against the HIBP Pwned Passwords corpus or an equivalent offline list)
 
 ### 7.2 Password Management *(NIST CSF: PR.AC-1)*
 - Use approved password management tools for generating and storing passwords
@@ -79,6 +86,7 @@ Applies to all passwords used to access company systems, applications, and servi
 
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.PT (Protective Technology)
+- NIST SP 800-63B: Digital Identity Guidelines — Memorized Secret Authenticators (§5.1)
 
 ## Version History
 

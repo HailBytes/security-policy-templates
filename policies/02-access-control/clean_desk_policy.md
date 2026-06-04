@@ -38,6 +38,9 @@ Applies to all employees and contractors working in company facilities or remote
 - Provide secure storage solutions (lockable drawers, cabinets)
 - Install automatic screen locks on all workstations
 
+## Enforcement
+Leaving sensitive documents unattended, failing to secure workstations when away, or improper disposal of confidential materials are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security)
 

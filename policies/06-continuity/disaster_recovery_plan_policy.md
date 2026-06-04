@@ -54,6 +54,9 @@ The disaster recovery plan is activated when:
 - Semi-annual plan review and updates
 - Document test results and improvement actions
 
+## Enforcement
+Failure to maintain required backups, failure to participate in mandatory disaster recovery testing, or failure to follow established recovery procedures during a declared disaster are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: ID.BE (Business Environment), PR.IP (Information Protection), RC (Recover)
 

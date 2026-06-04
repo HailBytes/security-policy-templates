@@ -77,6 +77,9 @@ Applies to all passwords used to access company systems, applications, and servi
 - Track password policy violations
 - Provide additional training for policy violations
 
+## Enforcement
+Failure to comply with password complexity requirements, sharing credentials, or failure to report a suspected compromised account are policy violations. Violations must be reported to [Security Officer] and may result in immediate account suspension, disciplinary action up to and including termination, and potential legal action where applicable.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.PT (Protective Technology)
 

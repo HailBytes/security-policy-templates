@@ -62,6 +62,9 @@ Applies to all employees, contractors, and business partners with access to comp
 - Share knowledge and support colleagues' security awareness
 - Lead by example in demonstrating ethical behavior
 
+## Enforcement
+Violations of this policy — including misuse of confidential information, undisclosed conflicts of interest, engaging in prohibited activities, or failure to report known violations — may result in disciplinary action up to and including termination and potential legal action. All violations must be reported to [Security Officer].
+
 ## References
 - NIST CSF v1.1: ID.GV (Governance), PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security)
 

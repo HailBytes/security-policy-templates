@@ -14,6 +14,8 @@
 #   --industry     "Healthcare"           [Industry]
 #   --title-role   "IT Manager"           [Title/Role]     (incident response team roles)
 #   --legal-contact "legal@example.com"   [Contact Info]   (legal counsel contact)
+#   --primary-app  "Salesforce CRM"       [Primary business application]  (disaster recovery plan)
+#   --secondary-apps "Slack, Zoom"        [Secondary applications]        (disaster recovery plan)
 #   --output-dir   "./customized"         Directory to write customized files to
 #                                         (default: overwrites files in place)
 #   --dry-run                             Preview replacements without writing files
@@ -34,6 +36,8 @@
 #     --industry "Finance" \
 #     --title-role "IT Manager" \
 #     --legal-contact "legal@acme.com" \
+#     --primary-app "Salesforce CRM" \
+#     --secondary-apps "Slack, Zoom" \
 #     --output-dir "./customized"
 #
 #   # Overwrite files in place (make sure you have a git backup!):
@@ -55,6 +59,8 @@ DEPARTMENT=""
 INDUSTRY=""
 TITLE_ROLE=""
 LEGAL_CONTACT=""
+PRIMARY_APP=""
+SECONDARY_APPS=""
 OUTPUT_DIR=""
 DRY_RUN=false
 
@@ -83,6 +89,8 @@ while [[ $# -gt 0 ]]; do
     --industry)       INDUSTRY="$2";       shift 2 ;;
     --title-role)     TITLE_ROLE="$2";     shift 2 ;;
     --legal-contact)  LEGAL_CONTACT="$2";  shift 2 ;;
+    --primary-app)    PRIMARY_APP="$2";    shift 2 ;;
+    --secondary-apps) SECONDARY_APPS="$2"; shift 2 ;;
     --output-dir)     OUTPUT_DIR="$2";     shift 2 ;;
     --dry-run)      DRY_RUN=true;      shift   ;;
     --help|-h)      usage ;;
@@ -97,7 +105,8 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 # ─── Validate inputs ─────────────────────────────────────────────────────────
 if [[ -z "$COMPANY" && -z "$DATE" && -z "$IT_CONTACT" && -z "$SEC_OFFICER" && \
       -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" && \
-      -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" ]]; then
+      -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" && \
+      -z "$PRIMARY_APP" && -z "$SECONDARY_APPS" ]]; then
   echo -e "${YELLOW}Warning: No replacement values provided. Nothing to do.${RESET}"
   echo "Run with --help to see usage."
   exit 0
@@ -154,7 +163,9 @@ build_sed_args() {
   [[ -n "$DEPARTMENT" ]]    && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
   [[ -n "$INDUSTRY" ]]      && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
   [[ -n "$TITLE_ROLE" ]]    && args+=(-e "s/\[Title\/Role\]/$(escape_replace "$TITLE_ROLE")/g")
-  [[ -n "$LEGAL_CONTACT" ]] && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
+  [[ -n "$LEGAL_CONTACT" ]]   && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
+  [[ -n "$PRIMARY_APP" ]]     && args+=(-e "s/\[Primary business application\]/$(escape_replace "$PRIMARY_APP")/g")
+  [[ -n "$SECONDARY_APPS" ]]  && args+=(-e "s/\[Secondary applications\]/$(escape_replace "$SECONDARY_APPS")/g")
 
   printf '%s\n' "${args[@]}"
 }
@@ -176,7 +187,9 @@ echo "Replacements configured:"
 [[ -n "$DEPARTMENT" ]]    && echo "  [Department]       → $DEPARTMENT"
 [[ -n "$INDUSTRY" ]]      && echo "  [Industry]         → $INDUSTRY"
 [[ -n "$TITLE_ROLE" ]]    && echo "  [Title/Role]       → $TITLE_ROLE"
-[[ -n "$LEGAL_CONTACT" ]] && echo "  [Contact Info]     → $LEGAL_CONTACT"
+[[ -n "$LEGAL_CONTACT" ]]   && echo "  [Contact Info]              → $LEGAL_CONTACT"
+[[ -n "$PRIMARY_APP" ]]     && echo "  [Primary business application] → $PRIMARY_APP"
+[[ -n "$SECONDARY_APPS" ]]  && echo "  [Secondary applications]    → $SECONDARY_APPS"
 echo ""
 
 # ─── Setup output directory ──────────────────────────────────────────────────
@@ -197,7 +210,7 @@ for src_file in "${TARGET_FILES[@]}"; do
   rel_path="${src_file#${REPO_ROOT}/}"
 
   # Check if file contains any of our placeholders
-  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' "$src_file" 2>/dev/null; then
+  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Primary business application|Secondary applications)\]' "$src_file" 2>/dev/null; then
     $DRY_RUN && echo "  [skip] $rel_path (no placeholders found)"
     (( SKIPPED_COUNT++ )) || true
     continue
@@ -256,7 +269,7 @@ if ! $DRY_RUN; then
   [[ -n "$OUTPUT_DIR" ]] && REMAINING_DIRS=("$OUTPUT_DIR")
 
   remaining=$(grep -rn --include="*.md" \
-    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' \
+    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Primary business application|Secondary applications)\]' \
     "${REMAINING_DIRS[@]}" 2>/dev/null || true)
 
   if [[ -n "$remaining" ]]; then

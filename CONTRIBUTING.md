@@ -101,15 +101,19 @@ Every policy template **must** follow this structure. Copy the block below as yo
 
 Use these **exact** placeholder strings so the automation script (`scripts/customize.sh`) can replace them:
 
-| Placeholder | Replaced With |
-|-------------|--------------|
-| `[Company Name]` | Organization's legal name |
-| `[Date]` | Policy effective date (YYYY-MM-DD) |
-| `[IT Contact]` | IT department contact name or email |
-| `[Security Officer]` | CISO or security lead name/title |
-| `[Review Date]` | Next scheduled review date |
-| `[Department]` | Owning department |
-| `[Industry]` | Organization's industry sector |
+| Placeholder | Replaced With | Script Flag |
+|-------------|--------------|-------------|
+| `[Company Name]` | Organization's legal name | `--company` |
+| `[Date]` | Policy effective date (YYYY-MM-DD) | `--date` |
+| `[IT Contact]` | IT department contact name or email | `--it-contact` |
+| `[Security Officer]` | CISO or security lead name/title | `--sec-officer` |
+| `[Review Date]` | Next scheduled review date | `--review-date` |
+| `[Department]` | Owning department | `--department` |
+| `[Industry]` | Organization's industry sector | `--industry` |
+| `[Title/Role]` | Job title for incident response roles | `--title-role` |
+| `[Contact Info]` | Legal counsel or key contact | `--legal-contact` |
+| `[Primary business application]` | Most critical application (e.g. Salesforce CRM) | `--primary-app` |
+| `[Secondary applications]` | Supporting applications (e.g. Slack, Zoom) | `--secondary-apps` |
 
 **Rules:**
 - Always use square brackets: `[Placeholder Name]`

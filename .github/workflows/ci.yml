@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  shellcheck:
+    name: Lint shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@2.0.0
+        with:
+          scandir: ./scripts
+          severity: warning
+
+  placeholder-coverage:
+    name: Validate placeholder coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check automation placeholders in policies are handled by customize.sh
+        run: |
+          python3 - <<'PYEOF'
+          """
+          Scans policies/ and industry-variants/ for short [Placeholder] tokens
+          (≤ 4 words) and verifies that every one has a substitution rule in
+          scripts/customize.sh.
+
+          "Short" tokens are automation placeholders like [Company Name] that
+          customize.sh is designed to replace automatically. Longer tokens like
+          [approved change management tool or ticketing system] are intentional
+          fill-in-the-blank instructions left for the user, so we skip them.
+
+          templates/ and docs/ are excluded from the scan because those files
+          intentionally contain fill-in-the-blank tokens that are never automated.
+          """
+          import re, glob, sys
+
+          MAX_WORDS = 4
+
+          # Extract which placeholders customize.sh substitutes.
+          # Sed rules look like: args+=(-e "s/\[Company Name\]/...")
+          # The slash in Title/Role is escaped as \/ inside the sed expression.
+          with open("scripts/customize.sh") as f:
+              script = f.read()
+
+          handled = set(
+              m.replace("\\/", "/")
+              for m in re.findall(r's/\\\[(.+?)\\\]/', script)
+          )
+
+          # Collect short [Placeholder] tokens from policy files only.
+          # Excludes markdown links ([text](url)) via the (?!\() lookahead.
+          used = {}  # token → first file seen
+          for directory in ("policies", "industry-variants"):
+              for fn in glob.glob(f"{directory}/**/*.md", recursive=True):
+                  with open(fn) as f:
+                      text = f.read()
+                  for m in re.finditer(r'\[([A-Za-z][A-Za-z/ ]+)\](?!\()', text):
+                      token = m.group(1)
+                      word_count = len(token.split())
+                      if word_count <= MAX_WORDS and token not in used:
+                          used[token] = fn
+
+          missing = {k: v for k, v in used.items() if k not in handled}
+
+          if missing:
+              print(
+                  f"ERROR: {len(missing)} short placeholder(s) appear in policy "
+                  f"files but have no substitution rule in scripts/customize.sh:\n"
+              )
+              for token, path in sorted(missing.items()):
+                  print(f"  [{token}]  (first seen in {path})")
+              print(
+                  "\nFor each missing placeholder, add:\n"
+                  "  1. A --flag in the argument-parsing section of customize.sh\n"
+                  "  2. A variable assignment in the Defaults block\n"
+                  "  3. A sed rule in build_sed_args()\n"
+                  "  4. The placeholder name in both detection regexes\n"
+                  "  5. An entry in the Placeholder Conventions table in CONTRIBUTING.md\n"
+              )
+              sys.exit(1)
+
+          print(f"✓ All {len(used)} automation placeholder(s) in policy files are "
+                f"covered by scripts/customize.sh.")
+          PYEOF

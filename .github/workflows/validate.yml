@@ -1,0 +1,69 @@
+name: Validate Templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate-script:
+    name: customize.sh — syntax & placeholder coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check script syntax
+        run: bash -n scripts/customize.sh
+
+      - name: Dry-run with all supported flags
+        run: |
+          chmod +x scripts/customize.sh
+          ./scripts/customize.sh \
+            --company "Acme Corp" \
+            --date "2025-01-15" \
+            --it-contact "it@acme.com" \
+            --sec-officer "Jane Smith, CISO" \
+            --review-date "2026-01-15" \
+            --department "Information Security" \
+            --industry "Technology" \
+            --title-role "IT Manager" \
+            --legal-contact "legal@acme.com" \
+            --dry-run
+
+      - name: Run full customization to output dir
+        run: |
+          ./scripts/customize.sh \
+            --company "Acme Corp" \
+            --date "2025-01-15" \
+            --it-contact "it@acme.com" \
+            --sec-officer "Jane Smith, CISO" \
+            --review-date "2026-01-15" \
+            --department "Information Security" \
+            --industry "Technology" \
+            --title-role "IT Manager" \
+            --legal-contact "legal@acme.com" \
+            --output-dir /tmp/customized
+
+      - name: Assert all script-managed placeholders are resolved
+        run: |
+          remaining=$(grep -rn --include="*.md" \
+            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' \
+            /tmp/customized 2>/dev/null || true)
+          if [[ -n "$remaining" ]]; then
+            echo "::error::Script-managed placeholders survive after full customization:"
+            echo "$remaining"
+            exit 1
+          fi
+          echo "All script-managed org-config placeholders resolved."
+
+      - name: Warn on any remaining bracket placeholders in policy output
+        run: |
+          extras=$(grep -rn --include="*.md" \
+            -E '\[[A-Z][a-zA-Z ]{3,}\]' \
+            /tmp/customized/policies /tmp/customized/industry-variants 2>/dev/null \
+            | grep -v 'Company Name\|IT Contact\|Security Officer\|Review Date\|Department\|Industry\|Title/Role\|Contact Info' \
+            || true)
+          if [[ -n "$extras" ]]; then
+            echo "::warning::Uncovered placeholders found in policy output (not handled by customize.sh):"
+            echo "$extras"
+          fi

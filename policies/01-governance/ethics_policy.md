@@ -62,6 +62,9 @@ Applies to all employees, contractors, and business partners with access to comp
 - Share knowledge and support colleagues' security awareness
 - Lead by example in demonstrating ethical behavior
 
+## Enforcement
+Violations of this policy may result in disciplinary action up to and including termination of employment or contract, and may include civil or criminal legal action where applicable.
+
 ## References
 - NIST CSF v1.1: ID.GV (Governance), PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security)
 

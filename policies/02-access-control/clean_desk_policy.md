@@ -38,6 +38,9 @@ Applies to all employees and contractors working in company facilities or remote
 - Provide secure storage solutions (lockable drawers, cabinets)
 - Install automatic screen locks on all workstations
 
+## Enforcement
+Violations of this policy may result in disciplinary action up to and including termination of employment or contract, and may include legal action where applicable.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security)
 

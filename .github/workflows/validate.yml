@@ -1,0 +1,57 @@
+name: Validate Policies
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  validate:
+    name: Policy Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x scripts/validate-policies.sh scripts/customize.sh
+
+      - name: Run policy validator
+        run: ./scripts/validate-policies.sh --verbose
+
+      - name: Test customize.sh (dry-run, all flags)
+        run: |
+          ./scripts/customize.sh \
+            --company "Acme Corp" \
+            --date "2025-01-15" \
+            --it-contact "it@acme.com" \
+            --sec-officer "Jane Smith, CISO" \
+            --review-date "2026-01-15" \
+            --department "Information Technology" \
+            --industry "Finance" \
+            --title-role "IT Manager" \
+            --legal-contact "legal@acme.com" \
+            --dry-run
+
+      - name: Lint markdown (markdownlint-cli2)
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: |
+            policies/**/*.md
+            templates/**/*.md
+          config: .markdownlint.yml
+        continue-on-error: true
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --offline
+            --include-fragments
+            --glob-ignore-case
+            "policies/**/*.md"
+            "templates/**/*.md"
+            "docs/**/*.md"
+          fail: false

@@ -1,0 +1,25 @@
+# markdownlint configuration for security-policy-templates
+default: true
+
+# Allow long lines in policy documents (tables, citations, URLs)
+MD013:
+  line_length: 200
+  tables: false
+  code_blocks: false
+
+# Allow raw HTML (some templates use HTML comments)
+MD033: false
+
+# Heading style — ATX only (# Heading)
+MD003:
+  style: atx
+
+# Ordered list style — use 1. consistently
+MD029:
+  style: ordered
+
+# Allow duplicate headings across different files (policies share section names)
+MD024: false
+
+# Allow trailing punctuation in headings (e.g. "Compliance and Monitoring (NIST CSF: ...)")
+MD026: false

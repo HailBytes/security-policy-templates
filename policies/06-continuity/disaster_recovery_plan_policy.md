@@ -54,6 +54,9 @@ The disaster recovery plan is activated when:
 - Semi-annual plan review and updates
 - Document test results and improvement actions
 
+## Enforcement
+Failure to follow this disaster recovery plan may result in disciplinary action. Personnel who deliberately obstruct recovery procedures may face termination and legal action.
+
 ## References
 - NIST CSF v1.1: ID.BE (Business Environment), PR.IP (Information Protection), RC (Recover)
 

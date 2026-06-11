@@ -54,6 +54,9 @@ Applies to all email communications using company email systems or personal emai
 - Preserve suspicious emails for security analysis
 - Change passwords if email compromise is suspected
 
+## Enforcement
+Violations of this policy may result in disciplinary action up to and including termination of employment or contract, and may include legal action where applicable.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security), DE.AE (Anomalies and Events)
 

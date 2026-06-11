@@ -90,6 +90,9 @@ Applies to all routers, switches, and network infrastructure devices in company 
 - Implement emergency access procedures if needed
 - Update security configurations based on incident findings
 
+## Enforcement
+Violations of this policy may result in disciplinary action up to and including termination of employment or contract, and may include legal action where applicable.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring)
 

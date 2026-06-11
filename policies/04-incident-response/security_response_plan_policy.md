@@ -114,6 +114,9 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Response team training and certification
 - Plan updates based on exercise results
 
+## Enforcement
+Failure to follow this security response plan may result in disciplinary action. Personnel who deliberately obstruct or ignore response procedures may face termination and legal action.
+
 ## References
 - NIST CSF v1.1: DE (Detect), RS (Respond), RC (Recover)
 

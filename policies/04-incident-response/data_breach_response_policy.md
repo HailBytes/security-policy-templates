@@ -52,6 +52,9 @@ Applies to all suspected or confirmed data breaches involving company or custome
 - Communication records
 - Recovery actions and timeline
 
+## Enforcement
+Failure to follow this policy's incident response procedures may result in disciplinary action. Deliberate concealment of a breach or obstruction of response activities may also result in legal action.
+
 ## References
 - NIST CSF v1.1: DE.AE (Anomalies and Events), RS (Respond), RC (Recover)
 

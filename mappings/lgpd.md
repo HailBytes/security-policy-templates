@@ -189,6 +189,7 @@ For organizations operating across Latin America, note the following additional 
 
 ## Related Resources
 
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [ISO 27001 Mappings](./iso-27001.md)
 - [NIST CSF Mappings](./nist-csf.md)
 - [SOC 2 Mappings](./soc2.md)

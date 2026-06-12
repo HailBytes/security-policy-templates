@@ -210,7 +210,8 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 | [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
 | [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
 
-> **Full clause-level mappings** → [`/mappings`](./mappings/) directory
+> **Full clause-level mappings** → [`/mappings`](./mappings/) directory:
+> [`cis-controls.md`](./mappings/cis-controls.md) · [`iso-27001.md`](./mappings/iso-27001.md) · [`nist-csf.md`](./mappings/nist-csf.md) · [`soc2.md`](./mappings/soc2.md) · [`lgpd.md`](./mappings/lgpd.md)
 >
 > **Note on BACEN article numbers:** The 72-hour incident-notification clock under BACEN Res. 4.893/2021 lives in Articles 12 and 13, not Article 11. The data-breach and security-response rows above were corrected on 2026-05-18.
 

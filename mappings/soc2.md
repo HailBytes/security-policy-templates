@@ -169,6 +169,7 @@ See the [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.
 
 ## Related Resources
 
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [ISO 27001 Mappings](./iso-27001.md)
 - [NIST CSF Mappings](./nist-csf.md)
 - [LGPD Mappings](./lgpd.md)

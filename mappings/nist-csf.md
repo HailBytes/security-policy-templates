@@ -155,6 +155,7 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 
 ## Related Resources
 
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [ISO 27001 Mappings](./iso-27001.md)
 - [SOC 2 Mappings](./soc2.md)
 - [LGPD Mappings](./lgpd.md)

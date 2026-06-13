@@ -5,19 +5,24 @@
 #   ./scripts/customize.sh [OPTIONS]
 #
 # Options:
-#   --company      "Acme Corp"            [Company Name]
-#   --date         "2025-01-15"           [Date]           (YYYY-MM-DD)
-#   --it-contact   "it@example.com"       [IT Contact]
-#   --sec-officer  "Jane Smith, CISO"     [Security Officer]
-#   --review-date  "2026-01-15"           [Review Date]    (YYYY-MM-DD)
-#   --department   "Information Security" [Department]
-#   --industry     "Healthcare"           [Industry]
-#   --title-role   "IT Manager"           [Title/Role]     (incident response team roles)
-#   --legal-contact "legal@example.com"   [Contact Info]   (legal counsel contact)
-#   --output-dir   "./customized"         Directory to write customized files to
-#                                         (default: overwrites files in place)
-#   --dry-run                             Preview replacements without writing files
-#   --help                                Show this help message
+#   --company        "Acme Corp"             [Company Name]
+#   --date           "2025-01-15"            [Date]           (YYYY-MM-DD)
+#   --it-contact     "it@example.com"        [IT Contact]
+#   --sec-officer    "Jane Smith, CISO"      [Security Officer]
+#   --review-date    "2026-01-15"            [Review Date]    (YYYY-MM-DD)
+#   --department     "Information Security"  [Department]
+#   --industry       "Healthcare"            [Industry]
+#   --title-role     "IT Manager"            [Title/Role]     (incident response team roles)
+#   --legal-contact  "legal@example.com"     [Contact Info]   (legal counsel contact)
+#   --primary-app    "Salesforce"            [Primary business application]
+#   --secondary-apps "Slack, Jira"           [Secondary applications]
+#   --day-of-week    "Tuesday"               [Day of week]    (backup/maintenance schedule)
+#   --time-range     "02:00–04:00 UTC"       [Time range]     (backup/maintenance window)
+#   --ticketing-sys  "Jira"                  [approved change management tool or ticketing system]
+#   --output-dir     "./customized"          Directory to write customized files to
+#                                            (default: overwrites files in place)
+#   --dry-run                                Preview replacements without writing files
+#   --help                                   Show this help message
 #
 # Examples:
 #   # Preview changes without writing:
@@ -34,6 +39,11 @@
 #     --industry "Finance" \
 #     --title-role "IT Manager" \
 #     --legal-contact "legal@acme.com" \
+#     --primary-app "Salesforce" \
+#     --secondary-apps "Slack, Jira" \
+#     --day-of-week "Tuesday" \
+#     --time-range "02:00–04:00 UTC" \
+#     --ticketing-sys "Jira" \
 #     --output-dir "./customized"
 #
 #   # Overwrite files in place (make sure you have a git backup!):
@@ -55,6 +65,11 @@ DEPARTMENT=""
 INDUSTRY=""
 TITLE_ROLE=""
 LEGAL_CONTACT=""
+PRIMARY_APP=""
+SECONDARY_APPS=""
+DAY_OF_WEEK=""
+TIME_RANGE=""
+TICKETING_SYS=""
 OUTPUT_DIR=""
 DRY_RUN=false
 
@@ -74,18 +89,23 @@ usage() {
 # ─── Argument parsing ────────────────────────────────────────────────────────
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --company)      COMPANY="$2";      shift 2 ;;
-    --date)         DATE="$2";         shift 2 ;;
-    --it-contact)   IT_CONTACT="$2";   shift 2 ;;
-    --sec-officer)  SEC_OFFICER="$2";  shift 2 ;;
-    --review-date)  REVIEW_DATE="$2";  shift 2 ;;
-    --department)   DEPARTMENT="$2";   shift 2 ;;
+    --company)        COMPANY="$2";        shift 2 ;;
+    --date)           DATE="$2";           shift 2 ;;
+    --it-contact)     IT_CONTACT="$2";     shift 2 ;;
+    --sec-officer)    SEC_OFFICER="$2";    shift 2 ;;
+    --review-date)    REVIEW_DATE="$2";    shift 2 ;;
+    --department)     DEPARTMENT="$2";     shift 2 ;;
     --industry)       INDUSTRY="$2";       shift 2 ;;
     --title-role)     TITLE_ROLE="$2";     shift 2 ;;
     --legal-contact)  LEGAL_CONTACT="$2";  shift 2 ;;
+    --primary-app)    PRIMARY_APP="$2";    shift 2 ;;
+    --secondary-apps) SECONDARY_APPS="$2"; shift 2 ;;
+    --day-of-week)    DAY_OF_WEEK="$2";    shift 2 ;;
+    --time-range)     TIME_RANGE="$2";     shift 2 ;;
+    --ticketing-sys)  TICKETING_SYS="$2";  shift 2 ;;
     --output-dir)     OUTPUT_DIR="$2";     shift 2 ;;
-    --dry-run)      DRY_RUN=true;      shift   ;;
-    --help|-h)      usage ;;
+    --dry-run)        DRY_RUN=true;        shift   ;;
+    --help|-h)        usage ;;
     *) echo -e "${RED}Unknown option: $1${RESET}" >&2; usage ;;
   esac
 done
@@ -97,7 +117,9 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 # ─── Validate inputs ─────────────────────────────────────────────────────────
 if [[ -z "$COMPANY" && -z "$DATE" && -z "$IT_CONTACT" && -z "$SEC_OFFICER" && \
       -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" && \
-      -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" ]]; then
+      -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" && -z "$PRIMARY_APP" && \
+      -z "$SECONDARY_APPS" && -z "$DAY_OF_WEEK" && -z "$TIME_RANGE" && \
+      -z "$TICKETING_SYS" ]]; then
   echo -e "${YELLOW}Warning: No replacement values provided. Nothing to do.${RESET}"
   echo "Run with --help to see usage."
   exit 0
@@ -146,15 +168,20 @@ build_sed_args() {
     printf '%s' "$1" | sed 's/[&/\]/\\&/g'
   }
 
-  [[ -n "$COMPANY" ]]       && args+=(-e "s/\[Company Name\]/$(escape_replace "$COMPANY")/g")
-  [[ -n "$DATE" ]]          && args+=(-e "s/\[Date\]/$(escape_replace "$DATE")/g")
-  [[ -n "$IT_CONTACT" ]]    && args+=(-e "s/\[IT Contact\]/$(escape_replace "$IT_CONTACT")/g")
-  [[ -n "$SEC_OFFICER" ]]   && args+=(-e "s/\[Security Officer\]/$(escape_replace "$SEC_OFFICER")/g")
-  [[ -n "$REVIEW_DATE" ]]   && args+=(-e "s/\[Review Date\]/$(escape_replace "$REVIEW_DATE")/g")
-  [[ -n "$DEPARTMENT" ]]    && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
-  [[ -n "$INDUSTRY" ]]      && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
-  [[ -n "$TITLE_ROLE" ]]    && args+=(-e "s/\[Title\/Role\]/$(escape_replace "$TITLE_ROLE")/g")
-  [[ -n "$LEGAL_CONTACT" ]] && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
+  [[ -n "$COMPANY" ]]        && args+=(-e "s/\[Company Name\]/$(escape_replace "$COMPANY")/g")
+  [[ -n "$DATE" ]]           && args+=(-e "s/\[Date\]/$(escape_replace "$DATE")/g")
+  [[ -n "$IT_CONTACT" ]]     && args+=(-e "s/\[IT Contact\]/$(escape_replace "$IT_CONTACT")/g")
+  [[ -n "$SEC_OFFICER" ]]    && args+=(-e "s/\[Security Officer\]/$(escape_replace "$SEC_OFFICER")/g")
+  [[ -n "$REVIEW_DATE" ]]    && args+=(-e "s/\[Review Date\]/$(escape_replace "$REVIEW_DATE")/g")
+  [[ -n "$DEPARTMENT" ]]     && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
+  [[ -n "$INDUSTRY" ]]       && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
+  [[ -n "$TITLE_ROLE" ]]     && args+=(-e "s/\[Title\/Role\]/$(escape_replace "$TITLE_ROLE")/g")
+  [[ -n "$LEGAL_CONTACT" ]]  && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
+  [[ -n "$PRIMARY_APP" ]]    && args+=(-e "s/\[Primary business application\]/$(escape_replace "$PRIMARY_APP")/g")
+  [[ -n "$SECONDARY_APPS" ]] && args+=(-e "s/\[Secondary applications\]/$(escape_replace "$SECONDARY_APPS")/g")
+  [[ -n "$DAY_OF_WEEK" ]]    && args+=(-e "s/\[Day of week\]/$(escape_replace "$DAY_OF_WEEK")/g")
+  [[ -n "$TIME_RANGE" ]]     && args+=(-e "s/\[Time range\]/$(escape_replace "$TIME_RANGE")/g")
+  [[ -n "$TICKETING_SYS" ]]  && args+=(-e "s/\[approved change management tool or ticketing system\]/$(escape_replace "$TICKETING_SYS")/g")
 
   printf '%s\n' "${args[@]}"
 }
@@ -168,15 +195,20 @@ if [[ ${#SED_ARGS[@]} -eq 0 ]]; then
 fi
 
 echo "Replacements configured:"
-[[ -n "$COMPANY" ]]       && echo "  [Company Name]     → $COMPANY"
-[[ -n "$DATE" ]]          && echo "  [Date]             → $DATE"
-[[ -n "$IT_CONTACT" ]]    && echo "  [IT Contact]       → $IT_CONTACT"
-[[ -n "$SEC_OFFICER" ]]   && echo "  [Security Officer] → $SEC_OFFICER"
-[[ -n "$REVIEW_DATE" ]]   && echo "  [Review Date]      → $REVIEW_DATE"
-[[ -n "$DEPARTMENT" ]]    && echo "  [Department]       → $DEPARTMENT"
-[[ -n "$INDUSTRY" ]]      && echo "  [Industry]         → $INDUSTRY"
-[[ -n "$TITLE_ROLE" ]]    && echo "  [Title/Role]       → $TITLE_ROLE"
-[[ -n "$LEGAL_CONTACT" ]] && echo "  [Contact Info]     → $LEGAL_CONTACT"
+[[ -n "$COMPANY" ]]        && echo "  [Company Name]                                      → $COMPANY"
+[[ -n "$DATE" ]]           && echo "  [Date]                                              → $DATE"
+[[ -n "$IT_CONTACT" ]]     && echo "  [IT Contact]                                        → $IT_CONTACT"
+[[ -n "$SEC_OFFICER" ]]    && echo "  [Security Officer]                                  → $SEC_OFFICER"
+[[ -n "$REVIEW_DATE" ]]    && echo "  [Review Date]                                       → $REVIEW_DATE"
+[[ -n "$DEPARTMENT" ]]     && echo "  [Department]                                        → $DEPARTMENT"
+[[ -n "$INDUSTRY" ]]       && echo "  [Industry]                                          → $INDUSTRY"
+[[ -n "$TITLE_ROLE" ]]     && echo "  [Title/Role]                                        → $TITLE_ROLE"
+[[ -n "$LEGAL_CONTACT" ]]  && echo "  [Contact Info]                                      → $LEGAL_CONTACT"
+[[ -n "$PRIMARY_APP" ]]    && echo "  [Primary business application]                      → $PRIMARY_APP"
+[[ -n "$SECONDARY_APPS" ]] && echo "  [Secondary applications]                            → $SECONDARY_APPS"
+[[ -n "$DAY_OF_WEEK" ]]    && echo "  [Day of week]                                       → $DAY_OF_WEEK"
+[[ -n "$TIME_RANGE" ]]     && echo "  [Time range]                                        → $TIME_RANGE"
+[[ -n "$TICKETING_SYS" ]]  && echo "  [approved change management tool or ticketing system] → $TICKETING_SYS"
 echo ""
 
 # ─── Setup output directory ──────────────────────────────────────────────────
@@ -197,7 +229,7 @@ for src_file in "${TARGET_FILES[@]}"; do
   rel_path="${src_file#${REPO_ROOT}/}"
 
   # Check if file contains any of our placeholders
-  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' "$src_file" 2>/dev/null; then
+  if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Primary business application|Secondary applications|Day of week|Time range|approved change management tool or ticketing system)\]' "$src_file" 2>/dev/null; then
     $DRY_RUN && echo "  [skip] $rel_path (no placeholders found)"
     (( SKIPPED_COUNT++ )) || true
     continue
@@ -256,7 +288,7 @@ if ! $DRY_RUN; then
   [[ -n "$OUTPUT_DIR" ]] && REMAINING_DIRS=("$OUTPUT_DIR")
 
   remaining=$(grep -rn --include="*.md" \
-    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info)\]' \
+    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Primary business application|Secondary applications|Day of week|Time range|approved change management tool or ticketing system)\]' \
     "${REMAINING_DIRS[@]}" 2>/dev/null || true)
 
   if [[ -n "$remaining" ]]; then

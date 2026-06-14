@@ -1,0 +1,13 @@
+default: true
+# Line length — policy documents intentionally have long descriptive lines
+MD013: false
+# Blank lines around headings — policies put content immediately after section headings
+MD022: false
+# Lists surrounded by blank lines — lists often follow bold sub-headers directly
+MD032: false
+# Inline HTML — some templates use HTML tables
+MD033: false
+# Emphasis used as heading — policies use **Bold:** as visual sub-section headers
+MD036: false
+# First line must be top-level heading — some docs have a preamble before H1
+MD041: false

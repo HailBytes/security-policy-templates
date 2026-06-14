@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint-markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            policies/**/*.md
+            templates/**/*.md
+            industry-variants/**/*.md
+            docs/**/*.md
+            mappings/**/*.md
+
+  nist-citations:
+    name: Verify NIST CSF Citations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every policy file has at least one NIST CSF citation
+        shell: bash
+        run: |
+          set -euo pipefail
+          total=0
+          missing=()
+          while IFS= read -r -d '' file; do
+            (( total++ )) || true
+            if ! grep -qE '\*\(NIST CSF:' "$file"; then
+              missing+=("$file")
+            fi
+          done < <(find policies -name "*.md" -print0 | sort -z)
+
+          if [[ ${#missing[@]} -gt 0 ]]; then
+            echo "::error::Policy files missing NIST CSF citations (required by CONTRIBUTING.md):"
+            printf '  %s\n' "${missing[@]}"
+            exit 1
+          fi
+          echo "All $total policy files contain NIST CSF citations."
+
+  customize-smoke-test:
+    name: Customize Script Smoke Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dry-run customization
+        run: |
+          bash scripts/customize.sh \
+            --company "Test Corp" \
+            --date "2025-01-15" \
+            --it-contact "it@test.com" \
+            --sec-officer "Jane Smith" \
+            --review-date "2026-01-15" \
+            --department "IT" \
+            --industry "Technology" \
+            --title-role "IT Manager" \
+            --legal-contact "legal@test.com" \
+            --dry-run
+
+      - name: Full customization to output directory
+        run: |
+          bash scripts/customize.sh \
+            --company "Test Corp" \
+            --date "2025-01-15" \
+            --it-contact "it@test.com" \
+            --sec-officer "Jane Smith" \
+            --review-date "2026-01-15" \
+            --department "IT" \
+            --industry "Technology" \
+            --title-role "IT Manager" \
+            --legal-contact "legal@test.com" \
+            --output-dir /tmp/customized
+
+      - name: Verify no known placeholders remain after full customization
+        shell: bash
+        run: |
+          set -euo pipefail
+          remaining=$(grep -rn --include="*.md" \
+            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title\/Role|Contact Info)\]' \
+            /tmp/customized/ 2>/dev/null || true)
+          if [[ -n "$remaining" ]]; then
+            echo "::error::Known placeholders not replaced after full customization:"
+            echo "$remaining"
+            exit 1
+          fi
+          echo "All known placeholders replaced successfully."

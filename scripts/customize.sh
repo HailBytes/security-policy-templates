@@ -18,6 +18,7 @@
 #   --maint-time   "02:00-04:00 UTC"     [Time range]     (standard maintenance window hours)
 #   --primary-app  "Salesforce"          [Primary business application]
 #   --secondary-apps "Slack, Jira"       [Secondary applications]
+#   --change-tool  "Jira"                [approved change management tool or ticketing system]
 #   --output-dir   "./customized"         Directory to write customized files to
 #                                         (default: overwrites files in place)
 #   --dry-run                             Preview replacements without writing files
@@ -42,6 +43,7 @@
 #     --maint-time "02:00-04:00 UTC" \
 #     --primary-app "Salesforce" \
 #     --secondary-apps "Slack, Jira" \
+#     --change-tool "Jira" \
 #     --output-dir "./customized"
 #
 #   # Overwrite files in place (make sure you have a git backup!):
@@ -67,6 +69,7 @@ MAINT_DAY=""
 MAINT_TIME=""
 PRIMARY_APP=""
 SECONDARY_APPS=""
+CHANGE_TOOL=""
 OUTPUT_DIR=""
 DRY_RUN=false
 
@@ -99,6 +102,7 @@ while [[ $# -gt 0 ]]; do
     --maint-time)     MAINT_TIME="$2";      shift 2 ;;
     --primary-app)    PRIMARY_APP="$2";     shift 2 ;;
     --secondary-apps) SECONDARY_APPS="$2";  shift 2 ;;
+    --change-tool)    CHANGE_TOOL="$2";     shift 2 ;;
     --output-dir)     OUTPUT_DIR="$2";      shift 2 ;;
     --dry-run)      DRY_RUN=true;      shift   ;;
     --help|-h)      usage ;;
@@ -114,7 +118,8 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 if [[ -z "$COMPANY" && -z "$DATE" && -z "$IT_CONTACT" && -z "$SEC_OFFICER" && \
       -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" && \
       -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" && \
-      -z "$MAINT_DAY" && -z "$MAINT_TIME" && -z "$PRIMARY_APP" && -z "$SECONDARY_APPS" ]]; then
+      -z "$MAINT_DAY" && -z "$MAINT_TIME" && -z "$PRIMARY_APP" && \
+      -z "$SECONDARY_APPS" && -z "$CHANGE_TOOL" ]]; then
   echo -e "${YELLOW}Warning: No replacement values provided. Nothing to do.${RESET}"
   echo "Run with --help to see usage."
   exit 0
@@ -176,6 +181,7 @@ build_sed_args() {
   [[ -n "$MAINT_TIME" ]]      && args+=(-e "s/\[Time range\]/$(escape_replace "$MAINT_TIME")/g")
   [[ -n "$PRIMARY_APP" ]]     && args+=(-e "s/\[Primary business application\]/$(escape_replace "$PRIMARY_APP")/g")
   [[ -n "$SECONDARY_APPS" ]]  && args+=(-e "s/\[Secondary applications\]/$(escape_replace "$SECONDARY_APPS")/g")
+  [[ -n "$CHANGE_TOOL" ]]     && args+=(-e "s/\[approved change management tool or ticketing system\]/$(escape_replace "$CHANGE_TOOL")/g")
 
   printf '%s\n' "${args[@]}"
 }
@@ -202,6 +208,7 @@ echo "Replacements configured:"
 [[ -n "$MAINT_TIME" ]]     && echo "  [Time range]                   → $MAINT_TIME"
 [[ -n "$PRIMARY_APP" ]]    && echo "  [Primary business application] → $PRIMARY_APP"
 [[ -n "$SECONDARY_APPS" ]] && echo "  [Secondary applications]       → $SECONDARY_APPS"
+[[ -n "$CHANGE_TOOL" ]]    && echo "  [approved change management tool or ticketing system] → $CHANGE_TOOL"
 echo ""
 
 # ─── Setup output directory ──────────────────────────────────────────────────
@@ -281,7 +288,7 @@ if ! $DRY_RUN; then
   [[ -n "$OUTPUT_DIR" ]] && REMAINING_DIRS=("$OUTPUT_DIR")
 
   remaining=$(grep -rn --include="*.md" \
-    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications)\]' \
+    -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications|approved change management tool or ticketing system)\]' \
     "${REMAINING_DIRS[@]}" 2>/dev/null || true)
 
   if [[ -n "$remaining" ]]; then

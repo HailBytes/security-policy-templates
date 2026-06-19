@@ -41,11 +41,12 @@ jobs:
             --maint-time "02:00-04:00 UTC" \
             --primary-app "Acme ERP" \
             --secondary-apps "Slack, Jira" \
+            --ticketing-system "Jira" \
             --output-dir "$tmpdir"
 
           # Check that no core configuration placeholders remain in policy files
           remaining=$(grep -rn --include="*.md" \
-            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications)\]' \
+            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications|approved change management tool or ticketing system)\]' \
             "$tmpdir/policies" 2>/dev/null || true)
 
           if [[ -n "$remaining" ]]; then

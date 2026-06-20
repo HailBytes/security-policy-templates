@@ -172,4 +172,5 @@ See the [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.
 - [ISO 27001 Mappings](./iso-27001.md)
 - [NIST CSF Mappings](./nist-csf.md)
 - [LGPD Mappings](./lgpd.md)
+- [GDPR Mappings](./gdpr.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)

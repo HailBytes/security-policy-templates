@@ -192,23 +192,23 @@ See **Implementation Guidelines** for detailed timelines, budgets, and success m
 
 These policy templates are pre-mapped to the major compliance frameworks used in enterprise procurement and regulatory audits. Full control-level mappings are in the [`/mappings`](./mappings/) directory.
 
-| Policy | ISO 27001:2022 | NIST CSF | SOC 2 | LGPD | BACEN 4893 |
-|--------|---------------|----------|-------|------|------------|
-| [Acceptable Use](policies/01-governance/acceptable_use_policy.md) | 5.1, 5.10 | ID.AM, PR.AT | CC1.1, CC6.1 | Art. 46 | Art. 4 |
-| [Password Protection](policies/02-access-control/password_protection_policy.md) | 5.15–5.18, 8.5 | PR.AC | CC6.1, CC6.3 | Art. 46 | Art. 4 |
-| [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 46 | — |
-| [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 46 | Art. 4 |
-| [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 6, 46 | Art. 4 |
-| [Data Breach Response](policies/04-incident-response/data_breach_response_policy.md) | 5.24–5.26 | RS.CO, RS.AN | CC7.3, CC7.4 | Art. 48 | Art. 12–13 |
-| [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 48 | Art. 12–13 |
-| [Disaster Recovery](policies/06-continuity/disaster_recovery_plan_policy.md) | 5.30, 8.13 | RC.RP | A1.2, A1.3 | Art. 46 | Art. 6 |
-| [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 46 | Art. 4 |
-| [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 46 | Art. 4, 5 |
-| [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5, 6 |
-| [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7, 14 |
-| [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
-| [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
-| [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+| Policy | ISO 27001:2022 | NIST CSF | SOC 2 | GDPR | LGPD | BACEN 4893 |
+|--------|---------------|----------|-------|------|------|------------|
+| [Acceptable Use](policies/01-governance/acceptable_use_policy.md) | 5.1, 5.10 | ID.AM, PR.AT | CC1.1, CC6.1 | Art. 5(1)(a), 6(1)(f) | Art. 46 | Art. 4 |
+| [Password Protection](policies/02-access-control/password_protection_policy.md) | 5.15–5.18, 8.5 | PR.AC | CC6.1, CC6.3 | Art. 32 | Art. 46 | Art. 4 |
+| [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 32 | Art. 46 | — |
+| [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 32, 34 | Art. 46 | Art. 4 |
+| [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 5, 30 | Art. 6, 46 | Art. 4 |
+| [Data Breach Response](policies/04-incident-response/data_breach_response_policy.md) | 5.24–5.26 | RS.CO, RS.AN | CC7.3, CC7.4 | Art. 33, 34 | Art. 48 | Art. 12–13 |
+| [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 33 | Art. 48 | Art. 12–13 |
+| [Disaster Recovery](policies/06-continuity/disaster_recovery_plan_policy.md) | 5.30, 8.13 | RC.RP | A1.2, A1.3 | Art. 32(1)(c) | Art. 46 | Art. 6 |
+| [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 32 | Art. 46 | Art. 4 |
+| [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 25, 28, 32 | Art. 46 | Art. 4, 5 |
+| [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 32 | Art. 46 | Art. 5, 6 |
+| [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 28, 44–49 | Art. 46, 50 | Art. 7, 14 |
+| [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 25, 35 | Art. 46 | Art. 5 |
+| [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 32 | Art. 46 | Art. 4 |
+| [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 22, 35 | Art. 6, 46 | Art. 4 |
 
 > **Full clause-level mappings** → [`/mappings`](./mappings/) directory
 >

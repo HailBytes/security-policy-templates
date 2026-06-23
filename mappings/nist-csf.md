@@ -157,6 +157,7 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 
 - [ISO 27001 Mappings](./iso-27001.md)
 - [SOC 2 Mappings](./soc2.md)
+- [HIPAA Security Rule Mappings](./hipaa.md)
 - [LGPD Mappings](./lgpd.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)
 - [HailBytes Enterprise Trust Package](https://hailbytes.com/enterprise?utm_source=github&utm_medium=mapping&utm_campaign=enterprise-trust)

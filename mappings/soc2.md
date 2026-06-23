@@ -171,5 +171,6 @@ See the [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.
 
 - [ISO 27001 Mappings](./iso-27001.md)
 - [NIST CSF Mappings](./nist-csf.md)
+- [HIPAA Security Rule Mappings](./hipaa.md)
 - [LGPD Mappings](./lgpd.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)

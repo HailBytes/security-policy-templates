@@ -17,6 +17,7 @@ These policy templates help SMBs establish robust cybersecurity frameworks witho
 ### Core Security Policies
 - **Acceptable Use Policy** - Guidelines for appropriate IT resource usage
 - **Password Protection Policy** - Comprehensive password security requirements with MFA guidance
+- **Multi-Factor Authentication (MFA) Policy** - Mandatory MFA coverage, approved methods, enrollment, and phishing-resistant requirements
 - **Clean Desk Policy** - Physical and digital workspace security controls
 - **Email Policy** - Secure email practices and threat awareness
 
@@ -196,6 +197,7 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 |--------|---------------|----------|-------|------|------------|
 | [Acceptable Use](policies/01-governance/acceptable_use_policy.md) | 5.1, 5.10 | ID.AM, PR.AT | CC1.1, CC6.1 | Art. 46 | Art. 4 |
 | [Password Protection](policies/02-access-control/password_protection_policy.md) | 5.15–5.18, 8.5 | PR.AC | CC6.1, CC6.3 | Art. 46 | Art. 4 |
+| [Multi-Factor Authentication](policies/02-access-control/multi_factor_authentication_policy.md) | 5.17, 8.5 | PR.AC-7 | CC6.1, CC6.3 | Art. 46 | Art. 4 |
 | [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 46 | — |
 | [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 46 | Art. 4 |
 | [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 6, 46 | Art. 4 |

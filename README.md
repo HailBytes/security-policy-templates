@@ -14,24 +14,39 @@ These policy templates help SMBs establish robust cybersecurity frameworks witho
 
 ## What's Included
 
-### Core Security Policies
+18 policy templates organized into six categories, plus implementation guidance.
+
+### Governance
 - **Acceptable Use Policy** - Guidelines for appropriate IT resource usage
+- **Ethics Policy** - Information ethics and responsible technology use
+- **AI Usage Governance Policy** - Requirements for responsible use of AI tools, LLMs, and AI agents (including MCP servers)
+- **Vendor and Third-Party Risk Management Policy** - Assessing and monitoring security risk from vendors and suppliers
+- **Change Management Policy** - Assessment, authorization, and review of changes to systems and controls
+- **Data Classification Policy** - Framework for classifying data by sensitivity and applying appropriate controls
+
+### Access Control
 - **Password Protection Policy** - Comprehensive password security requirements with MFA guidance
 - **Clean Desk Policy** - Physical and digital workspace security controls
+- **Remote Work and BYOD Policy** - Security requirements for remote work and personal device use
+
+### Communications
 - **Email Policy** - Secure email practices and threat awareness
 
 ### Incident Response & Recovery
 - **Data Breach Response Policy** - Step-by-step breach response procedures with notification requirements
 - **Security Response Plan Policy** - Comprehensive incident management framework
-- **Disaster Recovery Plan Policy** - Business continuity and system recovery procedures
 
 ### Infrastructure Security
 - **Server Security Policy** - Comprehensive server hardening and protection guidelines
 - **Router and Switch Security Policy** - Network infrastructure security requirements
 - **Wireless Communication Policy** - Wireless network and device security controls
+- **Cloud Security Policy** - Security requirements for IaaS, PaaS, and SaaS usage
+- **Vulnerability and Patch Management Policy** - Identifying, prioritizing, and remediating security vulnerabilities
 
-### Governance & Culture
-- **Ethics Policy** - Information ethics and responsible technology use
+### Continuity
+- **Disaster Recovery Plan Policy** - Business continuity and system recovery procedures
+
+### Implementation Guidance
 - **Implementation Guidelines** - Detailed deployment roadmap with timelines and budgets
 
 ## Quick Start

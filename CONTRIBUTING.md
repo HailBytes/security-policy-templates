@@ -110,6 +110,15 @@ Use these **exact** placeholder strings so the automation script (`scripts/custo
 | `[Review Date]` | Next scheduled review date |
 | `[Department]` | Owning department |
 | `[Industry]` | Organization's industry sector |
+| `[Title/Role]` | Incident response team member title or role |
+| `[Contact Info]` | Legal counsel contact name/email |
+| `[Day of week]` | Standard maintenance window day |
+| `[Time range]` | Standard maintenance window hours |
+| `[Primary business application]` | Organization's primary business application |
+| `[Secondary applications]` | Organization's secondary business applications |
+| `[Change Management Tool]` | Approved change management or ticketing system |
+
+This table must stay in sync with the flags in `scripts/customize.sh` — when you add a flag there, add its placeholder here too.
 
 **Rules:**
 - Always use square brackets: `[Placeholder Name]`

@@ -107,9 +107,17 @@ Use these **exact** placeholder strings so the automation script (`scripts/custo
 | `[Date]` | Policy effective date (YYYY-MM-DD) |
 | `[IT Contact]` | IT department contact name or email |
 | `[Security Officer]` | CISO or security lead name/title |
-| `[Review Date]` | Next scheduled review date |
+| `[Review Date]` | Next scheduled review date (YYYY-MM-DD) |
 | `[Department]` | Owning department |
 | `[Industry]` | Organization's industry sector |
+| `[Title/Role]` | Specific job title (e.g., incident response team roles) |
+| `[Contact Info]` | Legal counsel contact |
+| `[Day of week]` | Standard maintenance window day |
+| `[Time range]` | Standard maintenance window hours |
+| `[Primary business application]` | Organization's critical business application |
+| `[Secondary applications]` | Other applications referenced in policies |
+
+This list must stay in sync with the replacements implemented in `scripts/customize.sh` — if you add a new placeholder, wire it up in the script (and its `--help` text) in the same PR.
 
 **Rules:**
 - Always use square brackets: `[Placeholder Name]`

@@ -209,6 +209,9 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 | [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
 | [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
 | [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+| [Ethics](policies/01-governance/ethics_policy.md) | 5.1, 6.1–6.3 | GV.OC, ID.GV, PR.AT | CC1.1, CC1.5, CC3.3 | Art. 6, 47 | — |
+| [Router and Switch Security](policies/05-infrastructure/router_switch_security_policy.md) | 8.9, 8.20–8.22 | ID.AM, PR.AC, PR.IP, PR.PT, DE.CM | CC6.6, CC6.7 | — | — |
+| [Wireless Communication](policies/05-infrastructure/wireless_communication_policy.md) | 8.20–8.22 | PR.AC, PR.DS, PR.PT | CC6.6, CC6.7 | Art. 46 | — |
 
 > **Full clause-level mappings** → [`/mappings`](./mappings/) directory
 >

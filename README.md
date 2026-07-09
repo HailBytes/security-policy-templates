@@ -205,10 +205,13 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 | [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 46 | Art. 4 |
 | [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 46 | Art. 4, 5 |
 | [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5, 6 |
+| [Router and Switch Security](policies/05-infrastructure/router_switch_security_policy.md) | 8.9, 8.20, 8.22 | ID.AM-07, PR.IP-01, DE.CM-01 | — | — | — |
+| [Wireless Communication](policies/05-infrastructure/wireless_communication_policy.md) | 8.20, 8.22 | PR.DS-02 | CC6.7 | Art. 46 | — |
 | [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7, 14 |
 | [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
 | [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
 | [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+| [Ethics Policy](policies/01-governance/ethics_policy.md) | 5.1, 6.3 | GV.OC-01 | CC1.1, CC3.3 | Art. 6, 47 | — |
 
 > **Full clause-level mappings** → [`/mappings`](./mappings/) directory
 >

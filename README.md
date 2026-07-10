@@ -15,29 +15,36 @@ These policy templates help SMBs establish robust cybersecurity frameworks witho
 ## What's Included
 
 ### Core Security Policies
-- **Acceptable Use Policy** - Guidelines for appropriate IT resource usage
-- **Password Protection Policy** - Comprehensive password security requirements with MFA guidance
-- **Clean Desk Policy** - Physical and digital workspace security controls
-- **Email Policy** - Secure email practices and threat awareness
+- **[Acceptable Use Policy](policies/01-governance/acceptable_use_policy.md)** - Guidelines for appropriate IT resource usage
+- **[Password Protection Policy](policies/02-access-control/password_protection_policy.md)** - Comprehensive password security requirements with MFA guidance
+- **[Clean Desk Policy](policies/02-access-control/clean_desk_policy.md)** - Physical and digital workspace security controls
+- **[Email Policy](policies/03-communications/email_policy.md)** - Secure email practices and threat awareness
+- **[Remote Work / BYOD Policy](policies/02-access-control/remote_work_byod_policy.md)** - Security requirements for remote work and personal device use
 
 ### Incident Response & Recovery
-- **Data Breach Response Policy** - Step-by-step breach response procedures with notification requirements
-- **Security Response Plan Policy** - Comprehensive incident management framework
-- **Disaster Recovery Plan Policy** - Business continuity and system recovery procedures
+- **[Data Breach Response Policy](policies/04-incident-response/data_breach_response_policy.md)** - Step-by-step breach response procedures with notification requirements
+- **[Security Response Plan Policy](policies/04-incident-response/security_response_plan_policy.md)** - Comprehensive incident management framework
+- **[Disaster Recovery Plan Policy](policies/06-continuity/disaster_recovery_plan_policy.md)** - Business continuity and system recovery procedures
 
 ### Infrastructure Security
-- **Server Security Policy** - Comprehensive server hardening and protection guidelines
-- **Router and Switch Security Policy** - Network infrastructure security requirements
-- **Wireless Communication Policy** - Wireless network and device security controls
+- **[Server Security Policy](policies/05-infrastructure/server_security_policy.md)** - Comprehensive server hardening and protection guidelines
+- **[Router and Switch Security Policy](policies/05-infrastructure/router_switch_security_policy.md)** - Network infrastructure security requirements
+- **[Wireless Communication Policy](policies/05-infrastructure/wireless_communication_policy.md)** - Wireless network and device security controls
+- **[Cloud Security Policy](policies/05-infrastructure/cloud_security_policy.md)** - Security requirements for IaaS, PaaS, and SaaS environments
+- **[Vulnerability & Patch Management Policy](policies/05-infrastructure/vulnerability_patch_management_policy.md)** - Identifying, prioritizing, and remediating security vulnerabilities
 
 ### Governance & Culture
-- **Ethics Policy** - Information ethics and responsible technology use
-- **Implementation Guidelines** - Detailed deployment roadmap with timelines and budgets
+- **[Ethics Policy](policies/01-governance/ethics_policy.md)** - Information ethics and responsible technology use
+- **[Data Classification Policy](policies/01-governance/data_classification_policy.md)** - Classifying data by sensitivity and applying appropriate controls
+- **[Change Management Policy](policies/01-governance/change_management_policy.md)** - Assessing, authorizing, and documenting changes to IT systems
+- **[Vendor / Third-Party Risk Policy](policies/01-governance/vendor_third_party_risk_policy.md)** - Assessing and monitoring security risk from vendors and suppliers
+- **[AI Usage Governance Policy](policies/01-governance/ai_usage_governance_policy.md)** - Responsible and secure use of AI tools, LLMs, and AI agents
+- **[Implementation Guidelines](docs/implementation_guidelines.md)** - Detailed deployment roadmap with timelines and budgets
 
 ## Quick Start
 
 ### 1. Assessment & Prioritization
-Start with the **Implementation Guidelines** document to:
+Start with the **[Implementation Guidelines](docs/implementation_guidelines.md)** document to:
 - Assess your current security posture
 - Prioritize policies based on your risk profile
 - Plan your implementation timeline
@@ -93,7 +100,7 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 - Establish ongoing compliance monitoring
 - Conduct security assessments
 
-See **Implementation Guidelines** for detailed timelines, budgets, and success metrics.
+See **[Implementation Guidelines](docs/implementation_guidelines.md)** for detailed timelines, budgets, and success metrics.
 
 ## Target Audience
 
@@ -277,7 +284,7 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 
 ## Support
 
-- Review the Implementation Guidelines for detailed deployment guidance
+- Review the [Implementation Guidelines](docs/implementation_guidelines.md) for detailed deployment guidance
 - Check the Issues section for common implementation questions
 - Consider professional cybersecurity consultation for complex requirements
 

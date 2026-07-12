@@ -277,7 +277,7 @@ fi
 
 # ─── Check for remaining placeholders ────────────────────────────────────────
 if ! $DRY_RUN; then
-  REMAINING_DIRS=("${REPO_ROOT}/policies" "${REPO_ROOT}/templates" "${REPO_ROOT}/industry-variants")
+  REMAINING_DIRS=("${REPO_ROOT}/policies" "${REPO_ROOT}/templates" "${REPO_ROOT}/industry-variants" "${REPO_ROOT}/docs")
   [[ -n "$OUTPUT_DIR" ]] && REMAINING_DIRS=("$OUTPUT_DIR")
 
   remaining=$(grep -rn --include="*.md" \

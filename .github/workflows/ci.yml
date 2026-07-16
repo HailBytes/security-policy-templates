@@ -43,10 +43,11 @@ jobs:
             --secondary-apps "Slack, Jira" \
             --output-dir "$tmpdir"
 
-          # Check that no core configuration placeholders remain in policy files
+          # Check that no core configuration placeholders remain in policy,
+          # template, and industry-variant files (customize.sh processes all three)
           remaining=$(grep -rn --include="*.md" \
             -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications)\]' \
-            "$tmpdir/policies" 2>/dev/null || true)
+            "$tmpdir/policies" "$tmpdir/templates" "$tmpdir/industry-variants" 2>/dev/null || true)
 
           if [[ -n "$remaining" ]]; then
             echo "ERROR: Core placeholders still present after full customization:"

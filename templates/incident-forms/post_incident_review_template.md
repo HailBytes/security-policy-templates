@@ -368,7 +368,7 @@
 
 **Document Control**  
 **Version:** 1.0  
-**Created:** [DATE]  
-**Last Updated:** [DATE]  
-**Next Review:** [DATE]  
+**Created:** [Date]  
+**Last Updated:** [Date]  
+**Next Review:** [Review Date]  
 **Owner:** [INCIDENT RESPONSE TEAM]

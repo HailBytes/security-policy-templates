@@ -27,7 +27,7 @@
 - [Emerging attack vectors and techniques]
 
 **Statistics That Matter:**
-- **Average cost of data breach:** $[AMOUNT] ([INDUSTRY] industry)
+- **Average cost of data breach:** $[AMOUNT] ([Industry] industry)
 - **Average downtime:** [HOURS/DAYS] for similar incidents
 - **Ransomware payment trends:** [PERCENTAGE] pay vs. restore from backup
 - **Regulatory fines:** Recent examples in your industry/region

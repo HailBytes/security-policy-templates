@@ -433,8 +433,8 @@
 ## Document Control
 
 **Checklist Version:** 1.0  
-**Last Updated:** [DATE]  
-**Next Review:** [DATE]  
+**Last Updated:** [Date]  
+**Next Review:** [Review Date]  
 **Owner:** [SECURITY IMPLEMENTATION TEAM]  
 **Approved By:** [SECURITY MANAGER]
 

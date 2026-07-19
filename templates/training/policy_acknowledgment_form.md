@@ -291,7 +291,7 @@ I confirm that this employee has:
 ## Document Control and Retention
 
 **Form Version:** 1.0  
-**Policy Version Date:** [DATE]  
+**Policy Version Date:** [Date]  
 **Employee File Location:** [HR RECORDS SYSTEM]  
 **Retention Period:** [X] years after employment termination  
 **Next Review Required:** [ANNUAL/BIENNIAL]

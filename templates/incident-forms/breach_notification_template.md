@@ -252,9 +252,9 @@ Affected individuals will receive direct notification with detailed information 
 ## Document Control
 
 **Template Version:** 1.0  
-**Last Updated:** [DATE]  
+**Last Updated:** [Date]  
 **Approved By:** [Legal Counsel/Privacy Officer]  
-**Next Review:** [DATE]
+**Next Review:** [Review Date]
 
 ---
 

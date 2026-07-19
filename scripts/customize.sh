@@ -219,7 +219,7 @@ MODIFIED_COUNT=0
 SKIPPED_COUNT=0
 
 for src_file in "${TARGET_FILES[@]}"; do
-  rel_path="${src_file#${REPO_ROOT}/}"
+  rel_path="${src_file#"${REPO_ROOT}"/}"
 
   # Check if file contains any of our placeholders
   if ! grep -qE '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications)\]' "$src_file" 2>/dev/null; then
@@ -242,7 +242,7 @@ for src_file in "${TARGET_FILES[@]}"; do
     out_file="${OUTPUT_DIR}/${rel_path}"
     mkdir -p "$(dirname "$out_file")"
     sed "${SED_ARGS[@]}" "$src_file" > "$out_file"
-    echo -e "  ${GREEN}[written]${RESET} ${out_file#${REPO_ROOT}/}"
+    echo -e "  ${GREEN}[written]${RESET} ${out_file#"${REPO_ROOT}"/}"
   else
     # Overwrite in place
     # Use a temp file for safety

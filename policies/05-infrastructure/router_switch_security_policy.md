@@ -90,6 +90,9 @@ Applies to all routers, switches, and network infrastructure devices in company 
 - Implement emergency access procedures if needed
 - Update security configurations based on incident findings
 
+## Enforcement
+Unauthorized modification of network device configurations, disabling required security controls, or failure to apply firmware updates within defined timelines are policy violations. Violations must be escalated to [Security Officer] and may result in device isolation, service suspension, and disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring)
 

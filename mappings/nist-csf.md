@@ -160,5 +160,6 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 - [LGPD Mappings](./lgpd.md)
 - [GDPR Mappings](./gdpr.md)
 - [HIPAA Mappings](./hipaa.md)
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)
 - [HailBytes Enterprise Trust Package](https://hailbytes.com/enterprise?utm_source=github&utm_medium=mapping&utm_campaign=enterprise-trust)

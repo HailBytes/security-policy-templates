@@ -132,6 +132,9 @@ A post-incident review must be completed within 14 days of recovery using the Po
 
 Results are reported to [Title/Role] and retained for a minimum of three years.
 
+## Enforcement
+Failure to report suspected ransomware activity immediately, interacting with an attacker's payment portal or paying a ransom without legal authorization, or circumventing backup isolation and access controls are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
+
 ## References
 
 - NIST CSF 2.0: PR.AC, PR.DS, DE.CM, DE.AE, RS.RP, RS.AN, RS.MI, RS.CO, RC.RP, RC.IM, GV.PO

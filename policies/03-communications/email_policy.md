@@ -54,6 +54,9 @@ Applies to all email communications using company email systems or personal emai
 - Preserve suspicious emails for security analysis
 - Change passwords if email compromise is suspected
 
+## Enforcement
+Transmitting confidential data via unapproved channels, failing to report suspected phishing or email compromise, or using company email for prohibited purposes are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.AT (Awareness and Training), PR.DS (Data Security), DE.AE (Anomalies and Events)
 

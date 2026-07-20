@@ -52,6 +52,9 @@ Applies to all suspected or confirmed data breaches involving company or custome
 - Communication records
 - Recovery actions and timeline
 
+## Enforcement
+Failure to report a suspected or confirmed breach within required timeframes, failure to follow containment and notification procedures, or unauthorized external disclosure of breach details prior to proper notification are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination, as well as potential personal legal liability under applicable data protection regulations.
+
 ## References
 - NIST CSF v1.1: DE.AE (Anomalies and Events), RS (Respond), RC (Recover)
 

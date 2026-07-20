@@ -174,4 +174,5 @@ See the [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.
 - [LGPD Mappings](./lgpd.md)
 - [GDPR Mappings](./gdpr.md)
 - [HIPAA Mappings](./hipaa.md)
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)

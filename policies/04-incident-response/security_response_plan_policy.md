@@ -114,6 +114,9 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Response team training and certification
 - Plan updates based on exercise results
 
+## Enforcement
+Failure to report a security incident, failure to follow established response procedures, or unauthorized external disclosure of incident details before proper notification are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: DE (Detect), RS (Respond), RC (Recover)
 

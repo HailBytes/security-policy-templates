@@ -273,5 +273,6 @@ See the [Healthcare/HIPAA Industry Overlay](../industry-variants/healthcare-hipa
 - [SOC 2 Mappings](./soc2.md)
 - [LGPD Mappings](./lgpd.md)
 - [GDPR Mappings](./gdpr.md)
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [Healthcare/HIPAA Industry Overlay](../industry-variants/healthcare-hipaa-overlay.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)

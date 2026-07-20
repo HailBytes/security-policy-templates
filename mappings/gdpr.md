@@ -253,4 +253,5 @@ See the [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.
 - [SOC 2 Mappings](./soc2.md)
 - [LGPD Mappings](./lgpd.md) — Brazilian data protection law with similar principles to GDPR
 - [HIPAA Mappings](./hipaa.md)
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)

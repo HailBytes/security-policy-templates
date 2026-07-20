@@ -194,5 +194,6 @@ For organizations operating across Latin America, note the following additional 
 - [SOC 2 Mappings](./soc2.md)
 - [GDPR Mappings](./gdpr.md)
 - [HIPAA Mappings](./hipaa.md)
+- [CIS Controls v8 Mappings](./cis-controls.md)
 - [Enterprise Readiness Checklist](../docs/enterprise-readiness-checklist.md)
 - [HailBytes Enterprise Trust Package](https://hailbytes.com/enterprise?utm_source=github&utm_medium=mapping&utm_campaign=enterprise-trust)

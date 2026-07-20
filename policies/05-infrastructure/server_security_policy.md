@@ -154,6 +154,9 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Monitor for performance anomalies that may indicate security issues
 - Maintain service level agreements (SLAs) for critical servers
 
+## Enforcement
+Unauthorized changes to server configurations, disabling required security controls, or failure to apply required patches within defined timelines are policy violations. Violations must be escalated to [Security Officer] and may result in system isolation, service suspension, and disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security), PR.IP (Information Protection), PR.MA (Maintenance), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring), DE.AE (Anomalies and Events)
 

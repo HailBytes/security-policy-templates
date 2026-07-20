@@ -90,6 +90,9 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Review and update wireless security configurations
 - Document assessment findings and remediation actions
 
+## Enforcement
+Using unapproved wireless networks to transmit company data, connecting unauthorized devices to company wireless infrastructure, or disabling required wireless security controls are policy violations. Violations must be reported to [Security Officer] and may result in network access suspension and disciplinary action up to and including termination.
+
 ## References
 - NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring)
 

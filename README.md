@@ -15,29 +15,38 @@ These policy templates help SMBs establish robust cybersecurity frameworks witho
 ## What's Included
 
 ### Core Security Policies
-- **Acceptable Use Policy** - Guidelines for appropriate IT resource usage
-- **Password Protection Policy** - Comprehensive password security requirements with MFA guidance
-- **Clean Desk Policy** - Physical and digital workspace security controls
-- **Email Policy** - Secure email practices and threat awareness
+- **[Acceptable Use Policy](policies/01-governance/acceptable_use_policy.md)** - Guidelines for appropriate IT resource usage
+- **[Password Protection Policy](policies/02-access-control/password_protection_policy.md)** - Comprehensive password security requirements with MFA guidance
+- **[Multi-Factor Authentication (MFA) Policy](policies/02-access-control/multi_factor_authentication_policy.md)** - Mandatory MFA coverage, approved methods, and enrollment requirements
+- **[Clean Desk Policy](policies/02-access-control/clean_desk_policy.md)** - Physical and digital workspace security controls
+- **[Email Policy](policies/03-communications/email_policy.md)** - Secure email practices and threat awareness
+- **[Remote Work / BYOD Policy](policies/02-access-control/remote_work_byod_policy.md)** - Security requirements for remote work and personal device use
 
 ### Incident Response & Recovery
-- **Data Breach Response Policy** - Step-by-step breach response procedures with notification requirements
-- **Security Response Plan Policy** - Comprehensive incident management framework
-- **Disaster Recovery Plan Policy** - Business continuity and system recovery procedures
+- **[Data Breach Response Policy](policies/04-incident-response/data_breach_response_policy.md)** - Step-by-step breach response procedures with notification requirements
+- **[Security Response Plan Policy](policies/04-incident-response/security_response_plan_policy.md)** - Comprehensive incident management framework
+- **[Ransomware Response Policy](policies/04-incident-response/ransomware_response_policy.md)** - Ransomware-specific prevention, containment, and recovery procedures
+- **[Disaster Recovery Plan Policy](policies/06-continuity/disaster_recovery_plan_policy.md)** - Business continuity and system recovery procedures
 
 ### Infrastructure Security
-- **Server Security Policy** - Comprehensive server hardening and protection guidelines
-- **Router and Switch Security Policy** - Network infrastructure security requirements
-- **Wireless Communication Policy** - Wireless network and device security controls
+- **[Server Security Policy](policies/05-infrastructure/server_security_policy.md)** - Comprehensive server hardening and protection guidelines
+- **[Router and Switch Security Policy](policies/05-infrastructure/router_switch_security_policy.md)** - Network infrastructure security requirements
+- **[Wireless Communication Policy](policies/05-infrastructure/wireless_communication_policy.md)** - Wireless network and device security controls
+- **[Cloud Security Policy](policies/05-infrastructure/cloud_security_policy.md)** - Security requirements for IaaS, PaaS, and SaaS environments
+- **[Vulnerability & Patch Management Policy](policies/05-infrastructure/vulnerability_patch_management_policy.md)** - Identifying, prioritizing, and remediating security vulnerabilities
 
 ### Governance & Culture
-- **Ethics Policy** - Information ethics and responsible technology use
-- **Implementation Guidelines** - Detailed deployment roadmap with timelines and budgets
+- **[Ethics Policy](policies/01-governance/ethics_policy.md)** - Information ethics and responsible technology use
+- **[Data Classification Policy](policies/01-governance/data_classification_policy.md)** - Classifying data by sensitivity and applying appropriate controls
+- **[Change Management Policy](policies/01-governance/change_management_policy.md)** - Assessing, authorizing, and documenting changes to IT systems
+- **[Vendor / Third-Party Risk Policy](policies/01-governance/vendor_third_party_risk_policy.md)** - Assessing and monitoring security risk from vendors and suppliers
+- **[AI Usage Governance Policy](policies/01-governance/ai_usage_governance_policy.md)** - Responsible and secure use of AI tools, LLMs, and AI agents
+- **[Implementation Guidelines](docs/implementation_guidelines.md)** - Detailed deployment roadmap with timelines and budgets
 
 ## Quick Start
 
 ### 1. Assessment & Prioritization
-Start with the **Implementation Guidelines** document to:
+Start with the **[Implementation Guidelines](docs/implementation_guidelines.md)** document to:
 - Assess your current security posture
 - Prioritize policies based on your risk profile
 - Plan your implementation timeline
@@ -93,7 +102,7 @@ These policies comprehensively address all five NIST Cybersecurity Framework fun
 - Establish ongoing compliance monitoring
 - Conduct security assessments
 
-See **Implementation Guidelines** for detailed timelines, budgets, and success metrics.
+See **[Implementation Guidelines](docs/implementation_guidelines.md)** for detailed timelines, budgets, and success metrics.
 
 ## Target Audience
 
@@ -196,6 +205,7 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 |--------|---------------|----------|-------|------|------------|
 | [Acceptable Use](policies/01-governance/acceptable_use_policy.md) | 5.1, 5.10 | ID.AM, PR.AT | CC1.1, CC6.1 | Art. 46 | Art. 4 |
 | [Password Protection](policies/02-access-control/password_protection_policy.md) | 5.15–5.18, 8.5 | PR.AC | CC6.1, CC6.3 | Art. 46 | Art. 4 |
+| [Multi-Factor Authentication](policies/02-access-control/multi_factor_authentication_policy.md) | 5.17, 8.5 | PR.AC-7 | CC6.1, CC6.3 | Art. 46 | Art. 4 |
 | [Clean Desk](policies/02-access-control/clean_desk_policy.md) | 7.7 | PR.AC | CC6.4 | Art. 46 | — |
 | [Email](policies/03-communications/email_policy.md) | 5.14, 8.23 | PR.AT, DE.AE | CC2.2, CC7.2 | Art. 46 | Art. 4 |
 | [Data Classification](policies/01-governance/data_classification_policy.md) | 5.9, 5.12 | ID.AM, PR.DS | C1.1, CC3.2 | Art. 6, 46 | Art. 4 |
@@ -203,12 +213,15 @@ These policy templates are pre-mapped to the major compliance frameworks used in
 | [Security Response Plan](policies/04-incident-response/security_response_plan_policy.md) | 5.24–5.26 | RS, DE | CC7.3, CC7.4, CC7.5 | Art. 48 | Art. 12–13 |
 | [Disaster Recovery](policies/06-continuity/disaster_recovery_plan_policy.md) | 5.30, 8.13 | RC.RP | A1.2, A1.3 | Art. 46 | Art. 6 |
 | [Server Security](policies/05-infrastructure/server_security_policy.md) | 8.8, 8.9, 8.15 | PR.IP, DE.CM | CC7.1, CC7.2 | Art. 46 | Art. 4 |
+| [Router and Switch Security](policies/05-infrastructure/router_switch_security_policy.md) | 8.9, 8.20, 8.22 | ID.AM-07, PR.IP-01, DE.CM-01 | — | — | — |
+| [Wireless Communication](policies/05-infrastructure/wireless_communication_policy.md) | 8.20, 8.22 | PR.DS-02 | CC6.7 | Art. 46 | — |
 | [Cloud Security](policies/05-infrastructure/cloud_security_policy.md) | 5.19, 5.23, 8.25 | PR.IP, ID.AM | CC6.6, CC7.2 | Art. 46 | Art. 4, 5 |
 | [Vulnerability Management](policies/05-infrastructure/vulnerability_patch_management_policy.md) | 8.8 | PR.IP, ID.RA | CC7.1 | Art. 46 | Art. 5, 6 |
 | [Vendor / Third-Party Risk](policies/01-governance/vendor_third_party_risk_policy.md) | 5.19–5.22 | ID.SC | CC9.2 | Art. 46, 50 | Art. 7, 14 |
 | [Change Management](policies/01-governance/change_management_policy.md) | 8.32 | PR.IP | CC8.1 | Art. 46 | Art. 5 |
 | [Remote Work / BYOD](policies/02-access-control/remote_work_byod_policy.md) | 6.7, 8.1 | PR.AC, PR.IP | CC6.6, CC6.7 | Art. 46 | Art. 4 |
 | [AI Usage Governance](policies/01-governance/ai_usage_governance_policy.md) | 5.1, 5.10, 5.12 | ID.GV, PR.DS | CC1.1, CC3.2 | Art. 6, 46 | Art. 4 |
+| [Ethics](policies/01-governance/ethics_policy.md) | 5.1, 6.3 | GV.OC-01 | CC1.1, CC3.3 | Art. 6 | — |
 
 > **Full clause-level mappings** → [`/mappings`](./mappings/) directory
 >
@@ -277,7 +290,7 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 
 ## Support
 
-- Review the Implementation Guidelines for detailed deployment guidance
+- Review the [Implementation Guidelines](docs/implementation_guidelines.md) for detailed deployment guidance
 - Check the Issues section for common implementation questions
 - Consider professional cybersecurity consultation for complex requirements
 

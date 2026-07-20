@@ -34,7 +34,7 @@ All Normal and Major changes require a Change Request (CR) containing:
 - Proposed implementation date and maintenance window
 - Name of the implementer and approver
 
-Change Requests must be submitted via [approved change management tool or ticketing system].
+Change Requests must be submitted via [Change Management Tool].
 
 ### 1.3 Security Impact Assessment *(NIST CSF: PR.IP-3, ID.RA-1)*
 Every Change Request must include a security impact assessment covering:

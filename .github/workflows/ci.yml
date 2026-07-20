@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   shellcheck:
     name: ShellCheck
@@ -41,11 +44,12 @@ jobs:
             --maint-time "02:00-04:00 UTC" \
             --primary-app "Acme ERP" \
             --secondary-apps "Slack, Jira" \
+            --cm-tool "Jira Service Management" \
             --output-dir "$tmpdir"
 
           # Check that no core configuration placeholders remain in any customized directory
           remaining=$(grep -rn --include="*.md" \
-            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications)\]' \
+            -E '\[(Company Name|Date|IT Contact|Security Officer|Review Date|Department|Industry|Title/Role|Contact Info|Day of week|Time range|Primary business application|Secondary applications|Change Management Tool)\]' \
             "$tmpdir/policies" "$tmpdir/templates" "$tmpdir/industry-variants" "$tmpdir/docs" 2>/dev/null || true)
 
           if [[ -n "$remaining" ]]; then

@@ -18,6 +18,16 @@ jobs:
         run: sudo apt-get install -y shellcheck
       - name: Lint customize.sh
         run: shellcheck scripts/customize.sh
+      - name: Lint check_links.sh
+        run: shellcheck scripts/check_links.sh
+
+  markdown-links:
+    name: Markdown link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify relative markdown links resolve to real files
+        run: bash scripts/check_links.sh
 
   placeholder-coverage:
     name: Placeholder coverage

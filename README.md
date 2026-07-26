@@ -171,6 +171,7 @@ See **[Implementation Guidelines](docs/implementation_guidelines.md)** for detai
 - Business risk and impact overview
 - Policy framework and compliance requirements
 - Resource allocation and budget planning
+- **[Executive Cybersecurity Briefing Template](templates/training/executive_briefing_template.md)**
 
 ### IT Staff Training
 - Technical implementation procedures
@@ -181,6 +182,25 @@ See **[Implementation Guidelines](docs/implementation_guidelines.md)** for detai
 - Security awareness and best practices
 - Policy compliance requirements
 - Incident recognition and reporting
+- **[Employee Security Awareness Training Outline](templates/training/employee_training_outline.md)**
+- **[Security Policy Acknowledgment Form](templates/training/policy_acknowledgment_form.md)**
+
+## Templates & Tools
+
+Ready-to-use forms, checklists, and reporting templates that complement the policies above — use them alongside the policies during rollout, audits, and incident response.
+
+### Checklists
+- **[Implementation Checklist](templates/checklists/implementation_checklist.md)** - Track policy rollout tasks across all NIST CSF functions
+- **[Compliance Audit Checklist](templates/checklists/compliance_audit_checklist.md)** - Self-assessment checklist for periodic compliance reviews
+- **[Incident Response Checklist](templates/checklists/incident_response_checklist.md)** - Step-by-step actions to run during a live incident
+
+### Incident Forms
+- **[Incident Report Template](templates/incident-forms/incident_report_template.md)** - Standard form for documenting a security incident
+- **[Data Breach Notification Template](templates/incident-forms/breach_notification_template.md)** - Notification letter template for affected parties and regulators
+- **[Post-Incident Review Template](templates/incident-forms/post_incident_review_template.md)** - Structured after-action review and lessons-learned form
+
+### Metrics
+- **[Security KPI Dashboard Template](templates/metrics/security_kpi_dashboard.md)** - Track policy compliance rates, incident response effectiveness, and risk reduction over time
 
 ## Compliance & Auditing
 
@@ -194,6 +214,7 @@ See **[Implementation Guidelines](docs/implementation_guidelines.md)** for detai
 - Incident response effectiveness
 - Security awareness improvement
 - Risk reduction measurements
+- Tracked with the **[Security KPI Dashboard Template](templates/metrics/security_kpi_dashboard.md)**
 
 ---
 

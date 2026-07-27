@@ -297,6 +297,7 @@ This project is licensed under the Mozilla Public License 2.0 - see the LICENSE 
 - Review the [Implementation Guidelines](docs/implementation_guidelines.md) for detailed deployment guidance
 - Check the Issues section for common implementation questions
 - Consider professional cybersecurity consultation for complex requirements
+- Found a vulnerability in `scripts/customize.sh` or the CI workflow? See [SECURITY.md](SECURITY.md) for how to report it privately
 
 ---
 

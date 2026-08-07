@@ -10,7 +10,7 @@ Applies to all changes to IT infrastructure, systems, applications, network conf
 
 ## Change Types
 
-### 1.1 Change Classification *(NIST CSF: PR.IP-1, PR.IP-3)*
+### 1.1 Change Classification *(NIST CSF: PR.PS-01, PR.PS-01)*
 
 | Type | Definition | Approval Required | Lead Time |
 |------|-----------|-------------------|-----------|
@@ -23,7 +23,7 @@ All changes not fitting Standard or Emergency categories default to Normal.
 
 ## Change Request Process
 
-### 1.2 Submitting a Change Request *(NIST CSF: PR.IP-3)*
+### 1.2 Submitting a Change Request *(NIST CSF: PR.PS-01)*
 All Normal and Major changes require a Change Request (CR) containing:
 - Description of the change and business justification
 - Systems and services affected
@@ -36,7 +36,7 @@ All Normal and Major changes require a Change Request (CR) containing:
 
 Change Requests must be submitted via [Change Management Tool].
 
-### 1.3 Security Impact Assessment *(NIST CSF: PR.IP-3, ID.RA-1)*
+### 1.3 Security Impact Assessment *(NIST CSF: PR.PS-01, ID.RA-01)*
 Every Change Request must include a security impact assessment covering:
 - Does the change alter authentication or access control settings?
 - Does the change affect data encryption at rest or in transit?
@@ -47,7 +47,7 @@ Every Change Request must include a security impact assessment covering:
 
 Changes answering "Yes" to any question above require review by [IT Contact] or [Security Officer] before approval.
 
-### 1.4 Change Approval *(NIST CSF: PR.IP-3, ID.GV-1)*
+### 1.4 Change Approval *(NIST CSF: PR.PS-01, GV.PO-01)*
 - **Low-risk Normal changes:** [IT Contact] approval sufficient
 - **Medium-risk Normal changes:** [IT Contact] + system owner approval
 - **High-risk Normal or Major changes:** [Security Officer] + executive approval
@@ -57,25 +57,25 @@ Approval must be recorded in the change management system before implementation 
 
 ## Implementation Controls
 
-### 1.5 Testing Requirements *(NIST CSF: PR.IP-1, PR.IP-3)*
+### 1.5 Testing Requirements *(NIST CSF: PR.PS-01, PR.PS-01)*
 - All Normal and Major changes must be tested in a non-production environment before production deployment
 - Test results must be documented and attached to the Change Request
 - Security-relevant changes (firewall rules, access controls, authentication) must include a security validation test
 - Changes affecting disaster recovery or business continuity capabilities must include a recovery test
 
-### 1.6 Maintenance Windows *(NIST CSF: PR.IP-1)*
+### 1.6 Maintenance Windows *(NIST CSF: PR.PS-01)*
 - Standard maintenance window: [Day of week], [Time range]
 - Changes outside maintenance windows require explicit approval from [IT Contact]
 - Maintenance windows must be communicated to affected stakeholders at least 48 hours in advance
 - Emergency changes may occur outside maintenance windows; stakeholder notification within 2 hours
 
-### 1.7 Rollback Procedures *(NIST CSF: PR.IP-1, RC.RP-1)*
+### 1.7 Rollback Procedures *(NIST CSF: PR.PS-01, RC.RP-01)*
 - Every change must have a documented rollback plan before implementation begins
 - Rollback must be triggered if success criteria are not met within the defined implementation window
 - Rollback authority rests with the implementer unless otherwise specified in the CR
 - Post-rollback, a new CR must be submitted before re-attempting the change
 
-### 1.8 Change Documentation *(NIST CSF: PR.IP-1, ID.GV-1)*
+### 1.8 Change Documentation *(NIST CSF: PR.PS-01, GV.PO-01)*
 After every change is completed:
 - Document actual implementation steps taken
 - Record any deviations from the approved plan
@@ -86,7 +86,7 @@ After every change is completed:
 
 ## Emergency Change Process
 
-### 1.9 Emergency Change Procedure *(NIST CSF: RS.MI-1, PR.IP-3)*
+### 1.9 Emergency Change Procedure *(NIST CSF: RS.MA-01, PR.PS-01)*
 When an emergency change is needed (e.g., active security incident, critical system failure):
 1. [IT Contact] verbally authorizes the change
 2. Implementer documents the change action with timestamp as it occurs
@@ -99,14 +99,14 @@ Emergency changes that alter security controls (firewall rules, access permissio
 
 ## Configuration and Baseline Management
 
-### 1.10 Configuration Baselines *(NIST CSF: PR.IP-1, PR.DS-7)*
+### 1.10 Configuration Baselines *(NIST CSF: PR.PS-01, PR.DS-07)*
 - Approved configuration baselines must be maintained for all critical system types
 - Changes from baseline must be documented via the change management process
 - Unauthorized configuration drift must be detected and remediated within 14 days
 - Configuration baselines must be reviewed and updated annually or after Major changes
 - Infrastructure as Code (IaC) templates represent the baseline for cloud infrastructure
 
-### 1.11 Change Calendar *(NIST CSF: PR.IP-3)*
+### 1.11 Change Calendar *(NIST CSF: PR.PS-01)*
 - [IT Contact] maintains a forward schedule of all approved changes
 - Change calendar must be reviewed weekly by [IT Contact]
 - Conflicting changes must be identified and resolved before approval
@@ -114,14 +114,14 @@ Emergency changes that alter security controls (firewall rules, access permissio
 
 ## Review and Audit
 
-### 1.12 Post-Implementation Review *(NIST CSF: PR.IP-3, DE.AE-3)*
+### 1.12 Post-Implementation Review *(NIST CSF: PR.PS-01, DE.AE-03)*
 For Normal and Major changes:
 - Post-implementation review must occur within 5 business days
 - Review assesses: did the change achieve its objective, were there unintended impacts, were security controls maintained
 - Lessons learned must be documented for Major and Emergency changes
 - Recurring issues identified through change review must be escalated to [Security Officer]
 
-## Compliance and Monitoring *(NIST CSF: DE.CM-1, ID.GV-3)*
+## Compliance and Monitoring *(NIST CSF: DE.CM-01, GV.OC-03)*
 - Monthly change log review by [IT Contact] to identify unauthorized changes
 - Quarterly change process audit by [Security Officer]
 - All changes to security controls are logged and retained for 1 year
@@ -131,7 +131,7 @@ For Normal and Major changes:
 Implementing changes without following this policy, bypassing required approvals, or failing to document changes constitutes a policy violation. All unauthorized changes must be reported to [Security Officer] and may be rolled back pending investigation. Repeated violations may result in loss of system access and disciplinary action.
 
 ## References
-- NIST CSF v1.1: PR.IP (Information Protection Processes), ID.GV (Governance), RC.RP (Recovery Planning)
+- NIST CSF 2.0: PR.PS (Information Protection Processes), GV.PO (Governance), RC.RP (Recovery Planning)
 - NIST SP 800-128: Guide for Security-Focused Configuration Management
 - ITIL Change Management best practices
 

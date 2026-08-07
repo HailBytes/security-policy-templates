@@ -220,7 +220,7 @@ Ready-to-use forms, checklists, and reporting templates that complement the poli
 
 ## Mapped to Enterprise Frameworks
 
-These policy templates are pre-mapped to the major compliance frameworks used in enterprise procurement and regulatory audits. Full control-level mappings are in the [`/mappings`](./mappings/) directory.
+These policy templates are pre-mapped to the major compliance frameworks used in enterprise procurement and regulatory audits. Full control-level mappings are in the [`/mappings`](./mappings/) directory, with a consolidated cross-framework comparison in [`docs/framework_mapping.md`](./docs/framework_mapping.md).
 
 | Policy | ISO 27001:2022 | NIST CSF | SOC 2 | GDPR | LGPD | BACEN 4893 |
 |--------|---------------|----------|-------|------|------|------------|

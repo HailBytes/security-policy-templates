@@ -10,25 +10,25 @@ Applies to all employees and contractors working in company facilities or remote
 
 ## Policy Statements
 
-### 2.1 Physical Document Security *(NIST CSF: PR.AC-2, PR.DS-1)*
+### 2.1 Physical Document Security *(NIST CSF: PR.AA-06, PR.DS-01)*
 - Lock away confidential documents when not in immediate use
 - Clear desks of sensitive materials at end of each workday
 - Use document shredders for disposal of confidential papers
 - Secure filing cabinets must be locked when unattended
 
-### 2.2 Digital Workspace Security *(NIST CSF: PR.AC-1, PR.AC-7)*
+### 2.2 Digital Workspace Security *(NIST CSF: PR.AA-01, PR.AA-03)*
 - Lock computer screens when stepping away (maximum 15 minutes idle time)
 - Log off systems completely at end of workday
 - Position screens to prevent unauthorized viewing
 - Use privacy screens in public areas when handling sensitive data
 
-### 2.3 Removable Media and Devices *(NIST CSF: PR.AC-3, PR.DS-8)*
+### 2.3 Removable Media and Devices *(NIST CSF: PR.AA-03, PR.DS-08)*
 - Store USB drives, external hard drives, and portable devices securely
 - Encrypt sensitive data on removable media
 - Never leave devices unattended in public areas
 - Report lost or stolen devices immediately
 
-### 2.4 Access Control *(NIST CSF: PR.AC-2)*
+### 2.4 Access Control *(NIST CSF: PR.AA-06)*
 - Secure office keys, access cards, and security tokens
 - Escort visitors and ensure they don't access sensitive materials unattended
 - Close and lock office doors when leaving
@@ -42,7 +42,7 @@ Applies to all employees and contractors working in company facilities or remote
 Leaving sensitive documents unattended, failing to secure workstations when away, or improper disposal of confidential materials are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
 
 ## References
-- NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security)
+- NIST CSF 2.0: PR.AA (Access Control), PR.DS (Data Security)
 
 ## Version History
 

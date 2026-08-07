@@ -10,7 +10,6 @@
 #   --it-contact   "it@example.com"       [IT Contact]
 #   --sec-officer  "Jane Smith, CISO"     [Security Officer]
 #   --review-date  "2026-01-15"           [Review Date]    (YYYY-MM-DD)
-#   --department   "Information Security" [Department]
 #   --industry     "Healthcare"           [Industry]
 #   --title-role   "IT Manager"           [Title/Role]     (incident response team roles)
 #   --legal-contact "legal@example.com"   [Contact Info]   (legal counsel contact)
@@ -35,7 +34,6 @@
 #     --it-contact "John Doe / it@acme.com" \
 #     --sec-officer "Jane Smith, CISO" \
 #     --review-date "2026-01-15" \
-#     --department "Information Technology" \
 #     --industry "Finance" \
 #     --title-role "IT Manager" \
 #     --legal-contact "legal@acme.com" \
@@ -61,7 +59,6 @@ DATE=""
 IT_CONTACT=""
 SEC_OFFICER=""
 REVIEW_DATE=""
-DEPARTMENT=""
 INDUSTRY=""
 TITLE_ROLE=""
 LEGAL_CONTACT=""
@@ -94,7 +91,6 @@ while [[ $# -gt 0 ]]; do
     --it-contact)   IT_CONTACT="$2";   shift 2 ;;
     --sec-officer)  SEC_OFFICER="$2";  shift 2 ;;
     --review-date)  REVIEW_DATE="$2";  shift 2 ;;
-    --department)   DEPARTMENT="$2";   shift 2 ;;
     --industry)       INDUSTRY="$2";       shift 2 ;;
     --title-role)     TITLE_ROLE="$2";     shift 2 ;;
     --legal-contact)  LEGAL_CONTACT="$2";    shift 2 ;;
@@ -116,7 +112,7 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # ─── Validate inputs ─────────────────────────────────────────────────────────
 if [[ -z "$COMPANY" && -z "$DATE" && -z "$IT_CONTACT" && -z "$SEC_OFFICER" && \
-      -z "$REVIEW_DATE" && -z "$DEPARTMENT" && -z "$INDUSTRY" && \
+      -z "$REVIEW_DATE" && -z "$INDUSTRY" && \
       -z "$TITLE_ROLE" && -z "$LEGAL_CONTACT" && \
       -z "$MAINT_DAY" && -z "$MAINT_TIME" && -z "$PRIMARY_APP" && -z "$SECONDARY_APPS" && \
       -z "$CM_TOOL" ]]; then
@@ -135,7 +131,6 @@ validate_date() {
 }
 validate_date "$DATE" "--date"
 validate_date "$REVIEW_DATE" "--review-date"
-
 # ─── Find target files ───────────────────────────────────────────────────────
 # All markdown files in policies/, templates/, industry-variants/, and docs/
 mapfile -t TARGET_FILES < <(find "${REPO_ROOT}/policies" \
@@ -173,7 +168,6 @@ build_sed_args() {
   [[ -n "$IT_CONTACT" ]]    && args+=(-e "s/\[IT Contact\]/$(escape_replace "$IT_CONTACT")/g")
   [[ -n "$SEC_OFFICER" ]]   && args+=(-e "s/\[Security Officer\]/$(escape_replace "$SEC_OFFICER")/g")
   [[ -n "$REVIEW_DATE" ]]   && args+=(-e "s/\[Review Date\]/$(escape_replace "$REVIEW_DATE")/g")
-  [[ -n "$DEPARTMENT" ]]    && args+=(-e "s/\[Department\]/$(escape_replace "$DEPARTMENT")/g")
   [[ -n "$INDUSTRY" ]]      && args+=(-e "s/\[Industry\]/$(escape_replace "$INDUSTRY")/g")
   [[ -n "$TITLE_ROLE" ]]    && args+=(-e "s/\[Title\/Role\]/$(escape_replace "$TITLE_ROLE")/g")
   [[ -n "$LEGAL_CONTACT" ]]    && args+=(-e "s/\[Contact Info\]/$(escape_replace "$LEGAL_CONTACT")/g")
@@ -200,7 +194,6 @@ echo "Replacements configured:"
 [[ -n "$IT_CONTACT" ]]    && echo "  [IT Contact]       → $IT_CONTACT"
 [[ -n "$SEC_OFFICER" ]]   && echo "  [Security Officer] → $SEC_OFFICER"
 [[ -n "$REVIEW_DATE" ]]   && echo "  [Review Date]      → $REVIEW_DATE"
-[[ -n "$DEPARTMENT" ]]    && echo "  [Department]       → $DEPARTMENT"
 [[ -n "$INDUSTRY" ]]      && echo "  [Industry]         → $INDUSTRY"
 [[ -n "$TITLE_ROLE" ]]    && echo "  [Title/Role]       → $TITLE_ROLE"
 [[ -n "$LEGAL_CONTACT" ]]   && echo "  [Contact Info]                  → $LEGAL_CONTACT"

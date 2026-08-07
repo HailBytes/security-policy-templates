@@ -17,21 +17,21 @@ Applies to all suspected or confirmed data breaches involving company or custome
 
 ## Response Procedures
 
-### 3.1 Detection and Analysis *(NIST CSF: DE.AE-1, DE.AE-2, DE.DP-4)*
+### 3.1 Detection and Analysis *(NIST CSF: DE.AE-01, DE.AE-02, DE.AE-06)*
 **Immediate Actions (0-1 hours):**
 - Document the incident with timestamp and initial assessment
 - Determine if incident involves personal data, financial information, or business-critical systems
 - Notify Incident Commander immediately
 - Preserve evidence and avoid system changes that could impact investigation
 
-### 3.2 Containment and Assessment *(NIST CSF: RS.RP-1, RS.AN-1)*
+### 3.2 Containment and Assessment *(NIST CSF: RS.MA-01, RS.MA-02)*
 **Short-term Actions (1-24 hours):**
 - Isolate affected systems to prevent further data exposure
 - Assess scope: What data was involved? How many individuals affected?
 - Determine root cause and attack vector
 - Document all actions taken
 
-### 3.3 Notification Requirements *(NIST CSF: RS.CO-2, RS.CO-3)*
+### 3.3 Notification Requirements *(NIST CSF: RS.CO-02, RS.CO-03)*
 **Regulatory Notifications:**
 - Report to relevant authorities within required timeframes (typically 72 hours)
 - Document notification timing and content
@@ -40,7 +40,7 @@ Applies to all suspected or confirmed data breaches involving company or custome
 - Notify affected individuals within required timeframes (typically 30 days)
 - Provide clear explanation of what happened, what information was involved, and steps being taken
 
-### 3.4 Recovery and Lessons Learned *(NIST CSF: RC.RP-1, RC.IM-1)*
+### 3.4 Recovery and Lessons Learned *(NIST CSF: RC.RP-01, ID.IM-01)*
 - Implement additional security controls to prevent recurrence
 - Monitor systems for ongoing threats
 - Conduct post-incident review within 30 days
@@ -56,7 +56,7 @@ Applies to all suspected or confirmed data breaches involving company or custome
 Failure to report a suspected or confirmed breach within required timeframes, failure to follow containment and notification procedures, or unauthorized external disclosure of breach details prior to proper notification are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination, as well as potential personal legal liability under applicable data protection regulations.
 
 ## References
-- NIST CSF v1.1: DE.AE (Anomalies and Events), RS (Respond), RC (Recover)
+- NIST CSF 2.0: DE.AE (Anomalies and Events), RS (Respond), RC (Recover)
 
 ## Version History
 

@@ -17,7 +17,7 @@ surface is:
 Incorrect or outdated compliance/framework citations (e.g. a wrong NIST CSF or
 ISO 27001 control reference) are **content accuracy issues**, not security
 vulnerabilities — please report those as a regular
-[GitHub issue](../../issues) rather than through this policy.
+[GitHub issue](https://github.com/HailBytes/security-policy-templates/issues) rather than through this policy.
 
 ## Reporting a Vulnerability
 
@@ -26,7 +26,7 @@ workflow, or anything else in this repository that could lead to code
 execution, secret exposure, or a supply-chain compromise, please report it
 privately rather than opening a public issue:
 
-1. Use GitHub's [private vulnerability reporting](../../security/advisories/new)
+1. Use GitHub's [private vulnerability reporting](https://github.com/HailBytes/security-policy-templates/security/advisories/new)
    for this repository ("Security" tab → "Report a vulnerability"), or
 2. If that's unavailable, open a regular issue asking a maintainer to enable
    private reporting or provide an alternate contact, without including

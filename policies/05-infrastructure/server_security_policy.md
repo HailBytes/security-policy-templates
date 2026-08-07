@@ -8,7 +8,7 @@ To establish security requirements for server systems to protect against unautho
 ## Scope
 Applies to all physical and virtual servers, including on-premises, cloud, and hybrid environments.
 
-## Access Control and Authentication *(NIST CSF: PR.AC-1, PR.AC-7)*
+## Access Control and Authentication *(NIST CSF: PR.AA-01, PR.AA-03)*
 
 ### 11.1 Administrative Access
 - Implement principle of least privilege for all server access
@@ -17,14 +17,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Disable or rename default administrator accounts
 - Implement privileged access management (PAM) solutions
 
-### 11.2 Service Accounts *(NIST CSF: PR.AC-1, PR.AC-6)*
+### 11.2 Service Accounts *(NIST CSF: PR.AA-01, PR.AA-02)*
 - Create dedicated service accounts for each application or service
 - Use strong, unique passwords for service accounts
 - Implement service account password rotation (90 days maximum)
 - Grant minimal permissions required for service functionality
 - Monitor service account usage and access patterns
 
-## System Hardening *(NIST CSF: PR.IP-1, PR.PT-1)*
+## System Hardening *(NIST CSF: PR.PS-01, PR.PS-04)*
 
 ### 11.3 Operating System Security
 - Apply security baselines and hardening guides (CIS benchmarks)
@@ -33,14 +33,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Implement host-based firewalls with restrictive rules
 - Enable system auditing and logging
 
-### 11.4 Patch Management *(NIST CSF: PR.IP-12, PR.MA-1)*
+### 11.4 Patch Management *(NIST CSF: ID.RA-01, PR.PS-03)*
 - Implement automated patch management systems
 - Test patches in non-production environments first
 - Apply critical security patches within 72 hours
 - Maintain current inventory of installed software and versions
 - Document patch installation and rollback procedures
 
-## Data Protection *(NIST CSF: PR.DS-1, PR.DS-2)*
+## Data Protection *(NIST CSF: PR.DS-01, PR.DS-02)*
 
 ### 11.5 Data Encryption
 - Encrypt data at rest using approved encryption standards (AES-256)
@@ -49,14 +49,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Use encrypted protocols for data transmission (TLS 1.2 minimum)
 - Manage encryption keys securely with key management systems
 
-### 11.6 Backup and Recovery *(NIST CSF: PR.IP-4, RC.RP-1)*
+### 11.6 Backup and Recovery *(NIST CSF: PR.DS-11, RC.RP-01)*
 - Implement automated, regular backup procedures
 - Test backup integrity and restoration procedures monthly
 - Store backups in secure, geographically separate locations
 - Encrypt backup data and secure backup credentials
 - Document recovery time and recovery point objectives
 
-## Network Security *(NIST CSF: PR.AC-5, PR.DS-7)*
+## Network Security *(NIST CSF: PR.IR-01, PR.DS-07)*
 
 ### 11.7 Network Configuration
 - Implement network segmentation and micro-segmentation
@@ -65,14 +65,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Use secure protocols for remote management (SSH, RDP over VPN)
 - Monitor network connections and traffic patterns
 
-### 11.8 Remote Access *(NIST CSF: PR.AC-4, PR.MA-2)*
+### 11.8 Remote Access *(NIST CSF: PR.AA-05, PR.PS-02)*
 - Require VPN access for remote server management
 - Implement jump servers or bastion hosts for administrative access
 - Use encrypted remote access protocols only
 - Configure session timeouts and monitoring for remote sessions
 - Maintain logs of all remote access activities
 
-## Monitoring and Logging *(NIST CSF: DE.CM-1, DE.AE-3)*
+## Monitoring and Logging *(NIST CSF: DE.CM-01, DE.AE-03)*
 
 ### 11.9 Security Monitoring
 - Implement endpoint detection and response (EDR) solutions
@@ -81,14 +81,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Implement file integrity monitoring (FIM) for critical system files
 - Set up automated alerting for security events
 
-### 11.10 Log Management *(NIST CSF: DE.AE-3, PR.PT-1)*
+### 11.10 Log Management *(NIST CSF: DE.AE-03, PR.PS-04)*
 - Forward logs to centralized security information and event management (SIEM)
 - Retain security logs for minimum 1 year
 - Protect log integrity with secure storage and access controls
 - Regularly review logs for security incidents and anomalies
 - Correlate server events with network and application security events
 
-## Virtualization Security *(NIST CSF: PR.PT-2, PR.DS-8)*
+## Virtualization Security *(NIST CSF: PR.DS-01, PR.DS-08)*
 
 ### 11.11 Hypervisor Security
 - Harden hypervisor platforms according to vendor security guides
@@ -97,14 +97,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Secure virtual machine templates and images
 - Implement secure VM migration and backup procedures
 
-### 11.12 Container Security *(NIST CSF: PR.DS-6, PR.PT-1)*
+### 11.12 Container Security *(NIST CSF: PR.DS-06, PR.PS-04)*
 - Scan container images for vulnerabilities before deployment
 - Implement container runtime security and monitoring
 - Use minimal base images and remove unnecessary components
 - Implement container network segmentation and policies
 - Monitor container behavior for anomalous activity
 
-## Cloud Server Security *(NIST CSF: ID.SC-4, PR.AC-5)*
+## Cloud Server Security *(NIST CSF: GV.SC-07, PR.IR-01)*
 
 ### 11.13 Cloud Configuration
 - Implement cloud security posture management (CSPM)
@@ -113,14 +113,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Implement identity and access management (IAM) best practices
 - Regular security assessment of cloud configurations
 
-### 11.14 Shared Responsibility *(NIST CSF: ID.SC-1, ID.SC-2)*
+### 11.14 Shared Responsibility *(NIST CSF: GV.SC-01, GV.SC-03)*
 - Understand cloud provider security responsibilities vs. customer responsibilities
 - Implement additional security controls for customer-managed components
 - Monitor cloud provider security advisories and updates
 - Maintain documentation of cloud security configurations
 - Regular review of cloud service agreements and security requirements
 
-## Incident Response *(NIST CSF: DE.AE-1, RS.RP-1)*
+## Incident Response *(NIST CSF: DE.AE-01, RS.MA-01)*
 
 ### 11.15 Server Security Incidents
 - Implement automated incident detection and alerting
@@ -129,7 +129,7 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Coordinate with security response team for incident analysis
 - Document server security incidents and lessons learned
 
-## Maintenance and Change Management *(NIST CSF: PR.IP-3, PR.MA-1)*
+## Maintenance and Change Management *(NIST CSF: PR.PS-01, PR.PS-03)*
 
 ### 11.16 Server Maintenance
 - Schedule regular maintenance windows for updates and configuration changes
@@ -138,14 +138,14 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 - Maintain server configuration baselines and documentation
 - Verify security configurations after maintenance activities
 
-### 11.17 Decommissioning *(NIST CSF: PR.DS-3, PR.IP-6)*
+### 11.17 Decommissioning *(NIST CSF: PR.DS-03, PR.DS-09)*
 - Securely wipe or destroy storage media before disposal
 - Remove server access credentials and certificates
 - Update network configurations and firewall rules
 - Document decommissioning activities and data destruction
 - Transfer any required data or services to replacement systems
 
-## Performance and Capacity Monitoring *(NIST CSF: DE.CM-7, PR.PT-4)*
+## Performance and Capacity Monitoring *(NIST CSF: DE.CM-01, PR.AA-07)*
 
 ### 11.18 System Monitoring
 - Monitor server performance, capacity, and availability
@@ -158,7 +158,7 @@ Applies to all physical and virtual servers, including on-premises, cloud, and h
 Unauthorized changes to server configurations, disabling required security controls, or failure to apply required patches within defined timelines are policy violations. Violations must be escalated to [Security Officer] and may result in system isolation, service suspension, and disciplinary action up to and including termination.
 
 ## References
-- NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security), PR.IP (Information Protection), PR.MA (Maintenance), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring), DE.AE (Anomalies and Events)
+- NIST CSF 2.0: PR.AA (Access Control), PR.DS (Data Security), PR.PS (Platform Security), PR.IR (Infrastructure Resilience), DE.CM (Security Continuous Monitoring), DE.AE (Anomalies and Events)
 
 ## Version History
 

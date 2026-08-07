@@ -10,7 +10,7 @@ Applies to all third parties that access, process, store, or transmit [Company N
 
 ## Vendor Risk Tiers
 
-### 4.1 Risk Tiering *(NIST CSF: ID.SC-1, ID.RA-3)*
+### 4.1 Risk Tiering *(NIST CSF: GV.SC-01, ID.RA-03)*
 Third parties are assigned a risk tier based on data access and criticality:
 
 | Tier | Description | Assessment Frequency | Examples |
@@ -24,7 +24,7 @@ Risk tier assignment is performed by [Security Officer] during onboarding and re
 
 ## Vendor Onboarding
 
-### 4.2 Pre-Engagement Assessment *(NIST CSF: ID.SC-1, ID.SC-2)*
+### 4.2 Pre-Engagement Assessment *(NIST CSF: GV.SC-01, GV.SC-03)*
 Before engaging any Critical or High tier vendor:
 - Complete the [Company Name] Vendor Security Questionnaire
 - Review the vendor's most recent security certifications (SOC 2, ISO 27001, or equivalent)
@@ -36,7 +36,7 @@ For Medium tier vendors:
 - Abbreviated security questionnaire required
 - Review publicly available security documentation
 
-### 4.3 Contractual Requirements *(NIST CSF: ID.SC-3, ID.SC-4)*
+### 4.3 Contractual Requirements *(NIST CSF: GV.SC-05, GV.SC-07)*
 All vendor contracts involving data access must include:
 - **Data Processing Agreement (DPA)** or equivalent data protection terms
 - Confidentiality and non-disclosure obligations
@@ -49,7 +49,7 @@ All vendor contracts involving data access must include:
 
 Contracts must be reviewed by legal counsel before execution for Critical and High tier vendors.
 
-### 4.4 Access Provisioning *(NIST CSF: PR.AC-1, PR.AC-3, PR.AC-5)*
+### 4.4 Access Provisioning *(NIST CSF: PR.AA-01, PR.AA-03, PR.IR-01)*
 - Vendor access follows the principle of least privilege
 - Separate accounts must be created for each vendor; no shared credentials
 - Vendor access must be time-limited and tied to the contract period
@@ -59,13 +59,13 @@ Contracts must be reviewed by legal counsel before execution for Critical and Hi
 
 ## Ongoing Vendor Management
 
-### 4.5 Continuous Monitoring *(NIST CSF: ID.SC-4, DE.CM-6)*
+### 4.5 Continuous Monitoring *(NIST CSF: GV.SC-07, DE.CM-06)*
 - Monitor Critical vendors for security incidents using threat intelligence sources
 - Review vendor security advisories and patch bulletins monthly
 - Track vendor's security posture changes (certifications lapsed, data breaches reported)
 - Review vendor access logs quarterly to verify access is appropriate and active
 
-### 4.6 Periodic Reassessment *(NIST CSF: ID.SC-2, ID.RA-5)*
+### 4.6 Periodic Reassessment *(NIST CSF: GV.SC-03, ID.RA-05)*
 - Conduct formal reassessments on the schedule defined in the risk tier table (4.1)
 - Reassessment must be triggered immediately by:
   - Vendor security incident or data breach
@@ -74,7 +74,7 @@ Contracts must be reviewed by legal counsel before execution for Critical and Hi
   - Failed renewal of security certification
 - Document reassessment results; escalate deteriorating risk posture to [Security Officer]
 
-### 4.7 Vendor Security Questionnaire *(NIST CSF: ID.SC-2)*
+### 4.7 Vendor Security Questionnaire *(NIST CSF: GV.SC-03)*
 The standard questionnaire for Critical and High tier vendors must cover:
 - Information security program maturity
 - Access control and authentication practices
@@ -88,13 +88,13 @@ The standard questionnaire for Critical and High tier vendors must cover:
 
 ## Sub-Processor and Supply Chain Controls
 
-### 4.8 Sub-Processor Management *(NIST CSF: ID.SC-1, ID.SC-3)*
+### 4.8 Sub-Processor Management *(NIST CSF: GV.SC-01, GV.SC-05)*
 - Critical and High tier vendors must disclose all sub-processors that handle [Company Name] data
 - [Company Name] must approve changes to sub-processor lists before implementation
 - Vendor agreements must flow down equivalent security requirements to sub-processors
 - [Security Officer] maintains a register of known sub-processors and their risk ratings
 
-### 4.9 Software Supply Chain *(NIST CSF: ID.SC-4, PR.DS-6)*
+### 4.9 Software Supply Chain *(NIST CSF: GV.SC-07, PR.DS-06)*
 - Open-source and third-party software components must be inventoried (Software Bill of Materials)
 - Known vulnerabilities in third-party software must be tracked and remediated per the Vulnerability Management Policy
 - Software from sanctioned or high-risk origin countries must require additional review
@@ -102,14 +102,14 @@ The standard questionnaire for Critical and High tier vendors must cover:
 
 ## Incident and Termination Procedures
 
-### 4.10 Vendor Incident Response *(NIST CSF: RS.CO-3, RS.AN-2)*
+### 4.10 Vendor Incident Response *(NIST CSF: RS.CO-03, RS.MA-03)*
 - If a vendor reports a security incident affecting [Company Name] data, [Security Officer] must be notified immediately
 - Vendor must be asked for a written incident report within 5 business days
 - [Company Name] reserves the right to conduct its own investigation
 - Vendor incidents must be tracked in the [Company Name] incident log
 - Legal counsel must be consulted for incidents involving Restricted or regulated data
 
-### 4.11 Vendor Offboarding *(NIST CSF: PR.AC-1, PR.DS-3, PR.IP-11)*
+### 4.11 Vendor Offboarding *(NIST CSF: PR.AA-01, PR.DS-03, GV.RR-04)*
 Upon contract termination or non-renewal:
 - All vendor access credentials revoked within 24 hours
 - Vendor must certify in writing that all [Company Name] data has been deleted or returned within 30 days
@@ -117,7 +117,7 @@ Upon contract termination or non-renewal:
 - All shared credentials or API keys rotated immediately
 - Contract records and assessment documentation retained per data retention policy
 
-## Compliance and Monitoring *(NIST CSF: DE.CM-1, ID.GV-3)*
+## Compliance and Monitoring *(NIST CSF: DE.CM-01, GV.OC-03)*
 - [Security Officer] maintains a vendor register updated in real-time for Critical/High vendors
 - Monthly review of vendor access logs for unauthorized or excessive access
 - Annual review of all vendor contracts and risk tier assignments
@@ -127,7 +127,7 @@ Upon contract termination or non-renewal:
 Engaging vendors without completing required assessments, or failing to include mandatory contractual terms, constitutes a policy violation. Violations must be reported to [Security Officer] and may result in immediate contract suspension and disciplinary action for the responsible employee.
 
 ## References
-- NIST CSF v1.1: ID.SC (Supply Chain Risk Management), ID.RA (Risk Assessment), PR.AC (Access Control)
+- NIST CSF 2.0: GV.SC (Supply Chain Risk Management), ID.RA (Risk Assessment), PR.AA (Access Control)
 - NIST SP 800-161: Cybersecurity Supply Chain Risk Management Practices
 - ISO/IEC 27036: Information Security for Supplier Relationships
 

@@ -44,12 +44,12 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 | ID.RA-05: Threats, vulnerabilities, likelihoods determined | `policies/05-infrastructure/vulnerability_patch_management_policy.md` | CVSS scoring and exploitability assessment requirements |
 | ID.RA-06: Risk responses prioritized | `policies/05-infrastructure/vulnerability_patch_management_policy.md` | Risk-tiered patching SLAs (Critical 24h / High 7d / Medium 30d) |
 
-### ID.SC — Supply Chain Risk Management
+### GV.SC — Supply Chain Risk Management
 | Subcategory | Policy File | How It Satisfies |
 |-------------|-------------|------------------|
-| ID.SC-01: Cyber supply chain risk management | `policies/01-governance/vendor_third_party_risk_policy.md` | Third-party risk assessment and categorization procedures |
-| ID.SC-02: Suppliers assessed | `policies/01-governance/vendor_third_party_risk_policy.md` | Pre-engagement vendor security questionnaire requirements |
-| ID.SC-04: Supplier performance monitored | `policies/01-governance/vendor_third_party_risk_policy.md` | Annual re-assessment and incident notification requirements |
+| GV.SC-01: Cyber supply chain risk management | `policies/01-governance/vendor_third_party_risk_policy.md` | Third-party risk assessment and categorization procedures |
+| GV.SC-03: Suppliers assessed | `policies/01-governance/vendor_third_party_risk_policy.md` | Pre-engagement vendor security questionnaire requirements |
+| GV.SC-07: Supplier performance monitored | `policies/01-governance/vendor_third_party_risk_policy.md` | Annual re-assessment and incident notification requirements |
 
 ---
 
@@ -81,15 +81,15 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 | PR.DS-02 | `policies/05-infrastructure/wireless_communication_policy.md` | WPA3/WPA2-Enterprise and wireless encryption requirements |
 | PR.DS-10: Data used only for intended purpose | `policies/01-governance/ai_usage_governance_policy.md` | Restricts use of organizational data in AI training and queries |
 
-### PR.IP — Information Protection Processes and Procedures
+### PR.PS — Information Protection Processes and Procedures
 | Subcategory | Policy File | How It Satisfies |
 |-------------|-------------|------------------|
-| PR.IP-01: Baseline configurations established | `policies/05-infrastructure/server_security_policy.md` | CIS Benchmark-aligned server hardening baselines |
-| PR.IP-01 | `policies/05-infrastructure/router_switch_security_policy.md` | Network device configuration baselines |
-| PR.IP-03: Configuration change control | `policies/01-governance/change_management_policy.md` | Full ITSM-aligned change request and approval process |
-| PR.IP-04: Backups maintained | `policies/06-continuity/disaster_recovery_plan_policy.md` | 3-2-1 backup strategy with integrity testing schedule |
-| PR.IP-06: Data destroyed per policy | `policies/01-governance/data_classification_policy.md` | Data retention and secure disposal requirements by tier |
-| PR.IP-12: Vulnerabilities remediated | `policies/05-infrastructure/vulnerability_patch_management_policy.md` | Risk-tiered patching SLAs with exception handling process |
+| PR.PS-01: Baseline configurations established | `policies/05-infrastructure/server_security_policy.md` | CIS Benchmark-aligned server hardening baselines |
+| PR.PS-01 | `policies/05-infrastructure/router_switch_security_policy.md` | Network device configuration baselines |
+| PR.PS-01: Configuration change control | `policies/01-governance/change_management_policy.md` | Full ITSM-aligned change request and approval process |
+| PR.DS-11: Backups maintained | `policies/06-continuity/disaster_recovery_plan_policy.md` | 3-2-1 backup strategy with integrity testing schedule |
+| PR.DS-09: Data destroyed per policy | `policies/01-governance/data_classification_policy.md` | Data retention and secure disposal requirements by tier |
+| ID.RA-01: Vulnerabilities remediated | `policies/05-infrastructure/vulnerability_patch_management_policy.md` | Risk-tiered patching SLAs with exception handling process |
 
 ---
 
@@ -127,10 +127,10 @@ This file maps each policy template to specific NIST CSF 2.0 subcategories. Use 
 | RS.CO-02: Events reported to appropriate stakeholders | `policies/04-incident-response/data_breach_response_policy.md` | Regulatory notification timelines (72h GDPR, LGPD) and stakeholder communication |
 | RS.CO-03: Information shared with stakeholders | `policies/04-incident-response/security_response_plan_policy.md` | Internal and external communication protocols during incidents |
 
-### RS.AN — Incident Analysis
+### RS.MA — Incident Analysis
 | Subcategory | Policy File | How It Satisfies |
 |-------------|-------------|------------------|
-| RS.AN-03: Analysis performed to establish scope | `policies/04-incident-response/data_breach_response_policy.md` | Breach scope assessment and data subject impact analysis |
+| RS.MA-03: Analysis performed to establish scope | `policies/04-incident-response/data_breach_response_policy.md` | Breach scope assessment and data subject impact analysis |
 | RS.AN-06: Actions performed during investigation documented | `policies/04-incident-response/security_response_plan_policy.md` | Evidence preservation and chain of custody requirements |
 
 ---

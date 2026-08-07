@@ -3,7 +3,7 @@
 This document maps each [Company Name] security policy template to controls across four major security frameworks, enabling organizations to demonstrate compliance with multiple standards simultaneously.
 
 **Frameworks covered:**
-- **NIST CSF v1.1** — NIST Cybersecurity Framework (already embedded in each template)
+- **NIST CSF 2.0** — NIST Cybersecurity Framework (already embedded in each template)
 - **CIS Controls v8** — Center for Internet Security Critical Security Controls
 - **ISO/IEC 27001:2022** — Annex A Controls
 - **SOC 2 TSC** — AICPA Trust Services Criteria (2017 with 2022 points of focus)
@@ -18,7 +18,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.GV-1, PR.AT-1, PR.AT-2, PR.IP-11 |
+| NIST CSF | GV.PO-01, PR.AT-01, PR.AT-02, GV.RR-04 |
 | CIS Controls v8 | CIS 5 (Account Management), CIS 14 (Security Awareness) |
 | ISO 27001:2022 | A.5.10 (Acceptable use of information), A.6.3 (Information security awareness), A.8.1 (User endpoint devices) |
 | SOC 2 TSC | CC1.4 (Commitment to competence), CC9.9 (Vendor management) |
@@ -29,7 +29,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.GV-1, ID.GV-2, PR.AT-1 |
+| NIST CSF | GV.PO-01, GV.RR-02, PR.AT-01 |
 | CIS Controls v8 | CIS 14 (Security Awareness and Skills Training) |
 | ISO 27001:2022 | A.5.1 (Policies for information security), A.6.1 (Screening), A.6.2 (Terms and conditions of employment) |
 | SOC 2 TSC | CC1.1 (COSO principle: integrity and ethical values), CC1.5 (Accountability) |
@@ -40,7 +40,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.AC-1, PR.AC-7, DE.CM-1 |
+| NIST CSF | PR.AA-01, PR.AA-03, DE.CM-01 |
 | CIS Controls v8 | CIS 5.2 (Use unique passwords), CIS 6.3 (Require MFA for applications), CIS 6.5 (Require MFA for admin access) |
 | ISO 27001:2022 | A.8.5 (Secure authentication), A.5.17 (Authentication information) |
 | SOC 2 TSC | CC6.1 (Logical access security), CC6.6 (Prevent unauthorized access) |
@@ -51,7 +51,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.DS-1, PR.AC-2 |
+| NIST CSF | PR.DS-01, PR.AA-06 |
 | CIS Controls v8 | CIS 3.6 (Encrypt data on end-user devices) |
 | ISO 27001:2022 | A.7.7 (Clear desk and clear screen), A.7.9 (Security of assets off-premises) |
 | SOC 2 TSC | CC6.4 (Physical access controls) |
@@ -62,7 +62,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.DS-2, PR.AT-1, DE.CM-3 |
+| NIST CSF | PR.DS-02, PR.AT-01, DE.CM-01 |
 | CIS Controls v8 | CIS 9 (Email and Web Browser Protections), CIS 14 (Security Awareness) |
 | ISO 27001:2022 | A.8.22 (Web filtering), A.8.13 (Information backup), A.5.14 (Information transfer) |
 | SOC 2 TSC | CC6.7 (Data transmission controls), CC9.2 (Risk assessment) |
@@ -73,7 +73,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | RS.RP-1, RS.CO-1, RS.CO-2, RS.AN-1, RS.MI-1, RS.IM-1 |
+| NIST CSF | RS.MA-01, PR.AT-01, RS.CO-02, RS.MA-02, RS.MA-01, RS.MA-01 |
 | CIS Controls v8 | CIS 17 (Incident Response Management) |
 | ISO 27001:2022 | A.5.26 (Response to information security incidents), A.5.27 (Learning from incidents), A.5.28 (Collection of evidence) |
 | SOC 2 TSC | CC7.3 (Evaluate security events), CC7.4 (Respond to identified security incidents) |
@@ -84,7 +84,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | RS.RP-1, RS.CO-1, RS.CO-3, RS.AN-1, RS.AN-2, RS.MI-1, RS.MI-2, RS.IM-1, RS.IM-2 |
+| NIST CSF | RS.MA-01, PR.AT-01, RS.CO-03, RS.MA-02, RS.MA-03, RS.MA-01, RS.MA-02, RS.MA-01, RS.MA-02 |
 | CIS Controls v8 | CIS 17.1–17.9 (Incident Response Management) |
 | ISO 27001:2022 | A.5.24 (Information security incident management planning), A.5.25 (Assessment and decision on information security events) |
 | SOC 2 TSC | CC7.2 (Monitor for threats), CC7.5 (Recover from incidents) |
@@ -95,7 +95,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.AC-1, PR.AC-3, PR.IP-1, PR.PT-1, DE.CM-1 |
+| NIST CSF | PR.AA-01, PR.AA-03, PR.PS-01, PR.PS-04, DE.CM-01 |
 | CIS Controls v8 | CIS 4 (Secure Configuration), CIS 5 (Account Management), CIS 8 (Audit Log Management), CIS 12 (Network Infrastructure Management) |
 | ISO 27001:2022 | A.8.8 (Management of technical vulnerabilities), A.8.9 (Configuration management), A.8.15 (Logging), A.8.20 (Networks security) |
 | SOC 2 TSC | CC6.1, CC6.6, CC7.1 (Detect and monitor for anomalies) |
@@ -106,7 +106,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.AC-5, PR.IP-1, PR.PT-4, DE.CM-1 |
+| NIST CSF | PR.IR-01, PR.PS-01, PR.AA-07, DE.CM-01 |
 | CIS Controls v8 | CIS 12 (Network Infrastructure Management), CIS 13 (Network Monitoring and Defense) |
 | ISO 27001:2022 | A.8.20 (Networks security), A.8.21 (Security of network services), A.8.22 (Web filtering) |
 | SOC 2 TSC | CC6.6, CC6.7 |
@@ -117,7 +117,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.AC-3, PR.AC-5, PR.DS-2, PR.PT-4 |
+| NIST CSF | PR.AA-03, PR.IR-01, PR.DS-02, PR.AA-07 |
 | CIS Controls v8 | CIS 12.3 (Securely manage network infrastructure), CIS 13 (Network Monitoring) |
 | ISO 27001:2022 | A.8.20 (Networks security), A.8.21 (Security of network services) |
 | SOC 2 TSC | CC6.6, CC6.7 |
@@ -128,7 +128,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | RC.RP-1, RC.IM-1, RC.IM-2, RC.CO-1, RC.CO-3, PR.DS-4 |
+| NIST CSF | RC.RP-01, ID.IM-01, ID.IM-01, RC.CO-01, RC.CO-03, PR.DS-04 |
 | CIS Controls v8 | CIS 11 (Data Recovery) |
 | ISO 27001:2022 | A.5.29 (Information security during disruption), A.5.30 (ICT readiness for business continuity), A.8.13 (Information backup) |
 | SOC 2 TSC | A1.2 (Availability — recovery), A1.3 (Test recovery) |
@@ -139,7 +139,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.AC-3, PR.AC-7, PR.DS-1, PR.DS-2, PR.AT-1, DE.CM-1 |
+| NIST CSF | PR.AA-03, PR.AA-03, PR.DS-01, PR.DS-02, PR.AT-01, DE.CM-01 |
 | CIS Controls v8 | CIS 4.8 (Uninstall or disable unnecessary services), CIS 5 (Account Management), CIS 6 (Access Control Management), CIS 13 (Network Monitoring) |
 | ISO 27001:2022 | A.6.7 (Remote working), A.8.1 (User endpoint devices), A.8.5 (Secure authentication) |
 | SOC 2 TSC | CC6.1, CC6.6, CC6.7 |
@@ -150,7 +150,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.AM-5, PR.DS-1, PR.DS-3, PR.AC-4 |
+| NIST CSF | ID.AM-05, PR.DS-01, PR.DS-03, PR.AA-05 |
 | CIS Controls v8 | CIS 3 (Data Protection) — all sub-controls |
 | ISO 27001:2022 | A.5.12 (Classification of information), A.5.13 (Labelling of information), A.5.14 (Information transfer) |
 | SOC 2 TSC | CC6.1, CC6.5 (Discontinue access), P4 (Use of personal information) |
@@ -161,7 +161,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.SC-1, ID.SC-2, ID.SC-3, ID.SC-4, ID.SC-5, ID.RA-3 |
+| NIST CSF | GV.SC-01, GV.SC-03, GV.SC-05, GV.SC-07, GV.SC-08, ID.RA-03 |
 | CIS Controls v8 | CIS 15 (Service Provider Management) — all sub-controls |
 | ISO 27001:2022 | A.5.19 (Information security in supplier relationships), A.5.20 (Addressing security in supplier agreements), A.5.21 (Managing ICT supply chain security), A.5.22 (Monitoring and review of supplier services) |
 | SOC 2 TSC | CC9.2 (Manage vendor risk), CC3.3 (Identify and assess risk from third parties) |
@@ -172,7 +172,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.AM-2, PR.AC-1, PR.AC-3, PR.DS-1, PR.DS-2, PR.IP-1, DE.CM-1 |
+| NIST CSF | ID.AM-02, PR.AA-01, PR.AA-03, PR.DS-01, PR.DS-02, PR.PS-01, DE.CM-01 |
 | CIS Controls v8 | CIS 4 (Secure Configuration), CIS 5 (Account Management), CIS 16 (Application Software Security) |
 | ISO 27001:2022 | A.5.23 (Information security for use of cloud services), A.8.9 (Configuration management), A.8.10 (Information deletion) |
 | SOC 2 TSC | CC6.1, CC6.6, CC7.1, A1.1 (Availability — capacity) |
@@ -183,7 +183,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.RA-1, ID.RA-3, PR.IP-12, DE.CM-8, RS.MI-3 |
+| NIST CSF | ID.RA-01, ID.RA-03, ID.RA-01, ID.RA-01, RS.MA-03 |
 | CIS Controls v8 | CIS 7 (Continuous Vulnerability Management) — all sub-controls |
 | ISO 27001:2022 | A.8.8 (Management of technical vulnerabilities), A.8.19 (Installation of software on operational systems) |
 | SOC 2 TSC | CC7.1 (Detect anomalies), CC3.2 (Risk identification) |
@@ -194,7 +194,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | PR.IP-1, PR.IP-3, PR.DS-7, ID.GV-1 |
+| NIST CSF | PR.PS-01, PR.PS-01, PR.DS-07, GV.PO-01 |
 | CIS Controls v8 | CIS 4.1 (Establish secure configuration processes), CIS 16.1 (Establish and maintain a process for application security) |
 | ISO 27001:2022 | A.8.32 (Change management), A.8.9 (Configuration management), A.5.37 (Documented operating procedures) |
 | SOC 2 TSC | CC8.1 (Authorize, design, develop, acquire, implement, and maintain system components) |
@@ -205,7 +205,7 @@ This document maps each [Company Name] security policy template to controls acro
 
 | Framework | Applicable Controls |
 |-----------|-------------------|
-| NIST CSF | ID.AM-2, ID.GV-1, ID.GV-3, ID.SC-1, ID.SC-2, ID.SC-4, ID.RA-1, PR.AC-4, PR.AC-6, PR.DS-1, PR.DS-5, PR.AT-1, DE.CM-1, DE.AE-3 |
+| NIST CSF | ID.AM-02, GV.PO-01, GV.OC-03, GV.SC-01, GV.SC-03, GV.SC-07, ID.RA-01, PR.AA-05, PR.AA-02, PR.DS-01, PR.DS-05, PR.AT-01, DE.CM-01, DE.AE-03 |
 | CIS Controls v8 | CIS 2 (Inventory and Control of Software Assets — AI tools), CIS 3 (Data Protection — AI data handling), CIS 14 (Security Awareness — AI threats), CIS 15 (Service Provider Management — AI vendors and MCP publishers), CIS 16 (Application Software Security — AI-generated code) |
 | ISO 27001:2022 | A.5.1 (Policies for information security), A.5.10 (Acceptable use), A.5.23 (Information security for use of cloud services — applies to cloud AI APIs), A.6.3 (Information security awareness — AI threats), A.8.25 (Secure development life cycle — AI/ML models), A.8.26 (Application security requirements — LLM applications) |
 | SOC 2 TSC | CC6.1 (Logical access — AI agent permissions), CC6.7 (Transmission controls — AI API calls), CC9.2 (Vendor risk — AI providers and MCP publishers), CC3.2 (Risk identification — AI and agent risks) |
@@ -213,11 +213,34 @@ This document maps each [Company Name] security policy template to controls acro
 
 ---
 
+### 19. Multi-Factor Authentication Policy *(new)*
+
+| Framework | Applicable Controls |
+|-----------|-------------------|
+| NIST CSF | PR.AA-01, PR.AA-02, PR.AA-03, PR.AA-06 |
+| CIS Controls v8 | CIS 6.3 (Require MFA for applications), CIS 6.4 (Require MFA for admin access), CIS 6.5 (Require MFA for remote access) |
+| ISO 27001:2022 | A.8.5 (Secure authentication), A.5.17 (Authentication information) |
+| SOC 2 TSC | CC6.1 (Logical access security), CC6.6 (Prevent unauthorized access) |
+
+---
+
+### 20. Ransomware Response Policy *(new)*
+
+| Framework | Applicable Controls |
+|-----------|-------------------|
+| NIST CSF | PR.DS-11 (Backups), DE.CM-01, DE.AE-02, RS.MA-01, RS.MA-02, RS.MA-03, RS.CO-02, RC.RP-01, RC.RP-02, RC.RP-03, ID.IM-01 |
+| CIS Controls v8 | CIS 11 (Data Recovery), CIS 17.2 (Incident response testing), CIS 17.4 (Incident response communication) |
+| ISO 27001:2022 | A.8.13 (Information backup), A.8.14 (Redundancy), A.5.24 (Incident response planning), A.5.25 (Assess security events), A.5.26 (Response to incidents) |
+| SOC 2 TSC | CC7.3 (Incident response), CC7.4 (Security incident communication), CC7.5 (Recovery procedures) |
+| CISA Guidance | CISA Ransomware Guide (stopransomware.gov), NIST SP 800-184 |
+
+---
+
 ## Framework Comparison Summary
 
 | Framework | Focus | Best For | Assessment Type |
 |-----------|-------|---------|----------------|
-| **NIST CSF v1.1** | Risk-based cybersecurity management; 5 functions | All organizations; US government, critical infrastructure | Self-assessment; no formal certification |
+| **NIST CSF 2.0** | Risk-based cybersecurity management; 6 functions (Govern, Identify, Protect, Detect, Respond, Recover) | All organizations; US government, critical infrastructure | Self-assessment; no formal certification |
 | **CIS Controls v8** | Prescriptive, prioritized technical controls; 18 control groups | Technical teams; SMBs; measurable implementation roadmap | Self-assessment; IG1/IG2/IG3 maturity tiers |
 | **ISO/IEC 27001:2022** | Information Security Management System (ISMS); Annex A controls | Global organizations; enterprise supply chain requirements | Third-party certification by accredited body |
 | **SOC 2 (TSC)** | Trust Services Criteria for service organizations; CC, A, PI, C, P criteria | SaaS and service providers; customer audit requirements | Third-party audit by licensed CPA firm |

@@ -65,14 +65,14 @@ Every policy template **must** follow this structure. Copy the block below as yo
 - Requirement two
 - Requirement three
 
-## Compliance and Monitoring *(NIST CSF: DE.CM-1, DE.CM-7)*
+## Compliance and Monitoring *(NIST CSF: DE.CM-01, DE.CM-01)*
 - How compliance is measured and enforced.
 
 ## Enforcement
 [Consequences for policy violations.]
 
 ## References
-- NIST CSF v1.1: [Relevant categories]
+- NIST CSF 2.0: [Relevant categories]
 
 ## Version History
 
@@ -92,7 +92,7 @@ Every policy template **must** follow this structure. Copy the block below as yo
 | Policy body | Yes | At least 3 subsections with NIST citations |
 | Compliance and Monitoring | Yes | |
 | Enforcement | Yes | |
-| References | Yes | Always include NIST CSF v1.1 |
+| References | Yes | Always include NIST CSF 2.0 |
 | Version History | Yes | Start at 1.0 |
 
 ---
@@ -108,7 +108,6 @@ Use these **exact** placeholder strings so the automation script (`scripts/custo
 | `[IT Contact]` | IT department contact name or email |
 | `[Security Officer]` | CISO or security lead name/title |
 | `[Review Date]` | Next scheduled review date (YYYY-MM-DD) |
-| `[Department]` | Owning department |
 | `[Industry]` | Organization's industry sector |
 | `[Title/Role]` | Specific job title (e.g., incident response team roles) |
 | `[Contact Info]` | Legal counsel contact |
@@ -140,15 +139,15 @@ Every policy section **must** cite at least one NIST CSF subcategory in the form
 
 | Policy Area | Key NIST CSF References |
 |-------------|------------------------|
-| Access Control | PR.AC-1, PR.AC-3, PR.AC-4, PR.AC-5, PR.AC-6, PR.AC-7 |
-| Asset Management | ID.AM-1, ID.AM-2, ID.AM-3, ID.AM-4, ID.AM-5 |
-| Awareness & Training | PR.AT-1, PR.AT-2, PR.AT-3, PR.AT-4, PR.AT-5 |
-| Data Security | PR.DS-1, PR.DS-2, PR.DS-3, PR.DS-4, PR.DS-5 |
-| Incident Response | RS.RP-1, RS.CO-1, RS.AN-1, RS.MI-1, RS.IM-1 |
-| Risk Assessment | ID.RA-1, ID.RA-2, ID.RA-3, ID.RA-4, ID.RA-5, ID.RA-6 |
-| Supply Chain | ID.SC-1, ID.SC-2, ID.SC-3, ID.SC-4, ID.SC-5 |
-| Detection | DE.CM-1, DE.CM-3, DE.CM-7, DE.AE-1, DE.AE-2 |
-| Recovery | RC.RP-1, RC.IM-1, RC.IM-2, RC.CO-1, RC.CO-3 |
+| Access Control | PR.AA-01, PR.AA-03, PR.AA-05, PR.IR-01, PR.AA-02, PR.AA-03 |
+| Asset Management | ID.AM-01, ID.AM-02, ID.AM-03, ID.AM-04, ID.AM-05 |
+| Awareness & Training | PR.AT-01, PR.AT-02, PR.AT-03, PR.AT-04, PR.AT-05 |
+| Data Security | PR.DS-01, PR.DS-02, PR.DS-03, PR.DS-04, PR.DS-05 |
+| Incident Response | RS.MA-01, PR.AT-01, RS.MA-02, RS.MA-01, RS.MA-01 |
+| Risk Assessment | ID.RA-01, ID.RA-02, ID.RA-03, ID.RA-04, ID.RA-05, ID.RA-06 |
+| Supply Chain | GV.SC-01, GV.SC-03, GV.SC-05, GV.SC-07, GV.SC-08 |
+| Detection | DE.CM-01, DE.CM-01, DE.CM-01, DE.AE-01, DE.AE-02 |
+| Recovery | RC.RP-01, ID.IM-01, ID.IM-01, RC.CO-01, RC.CO-03 |
 
 Full NIST CSF reference: https://www.nist.gov/cyberframework
 

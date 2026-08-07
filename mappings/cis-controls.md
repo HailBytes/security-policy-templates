@@ -82,6 +82,7 @@ This file maps each policy template to specific CIS Controls v8 safeguards. Use 
 | 6.1 — Establish an access-granting and -revoking process | IG1 | `policies/02-access-control/password_protection_policy.md` | Formal access provisioning and deprovisioning procedures |
 | 6.2 — Establish an access review process | IG1 | `policies/02-access-control/password_protection_policy.md` | Quarterly access review requirements for all accounts |
 | 6.3 — Require MFA for externally exposed applications | IG1 | `policies/02-access-control/password_protection_policy.md` | MFA required for all external-facing applications |
+| 6.3 | IG1 | `policies/02-access-control/multi_factor_authentication_policy.md` | MFA enrollment policy, verification methods, and exception process |
 | 6.4 — Require MFA for remote network access | IG1 | `policies/02-access-control/remote_work_byod_policy.md` | MFA requirement for VPN and remote access solutions |
 | 6.5 — Require MFA for administrative access | IG2 | `policies/02-access-control/password_protection_policy.md` | MFA required for all privileged and administrative accounts |
 | 6.5 | IG2 | `policies/05-infrastructure/server_security_policy.md` | MFA enforcement for server and infrastructure admin access |
@@ -154,6 +155,7 @@ This file maps each policy template to specific CIS Controls v8 safeguards. Use 
 | 11.2 — Perform automated backups | IG1 | `policies/06-continuity/disaster_recovery_plan_policy.md` | Daily automated backup requirements for all critical systems |
 | 11.3 — Protect recovery data | IG1 | `policies/06-continuity/disaster_recovery_plan_policy.md` | Backup encryption and access control requirements |
 | 11.4 — Establish and maintain an isolated instance of recovery data | IG1 | `policies/06-continuity/disaster_recovery_plan_policy.md` | 3-2-1 backup strategy including offsite/offline copy |
+| 11.4 | IG1 | `policies/04-incident-response/ransomware_response_policy.md` | Immutable/offline backups as ransomware defense-in-depth |
 | 11.5 — Test data recovery | IG2 | `policies/06-continuity/disaster_recovery_plan_policy.md` | Quarterly backup restore tests with documented results |
 
 ---
@@ -235,6 +237,7 @@ This file maps each policy template to specific CIS Controls v8 safeguards. Use 
 | 17.2 | IG1 | `policies/04-incident-response/data_breach_response_policy.md` | Regulatory notification contacts (DPA, law enforcement) |
 | 17.3 — Establish and maintain an enterprise process for reporting incidents | IG1 | `policies/04-incident-response/security_response_plan_policy.md` | Employee incident reporting channel and escalation path |
 | 17.4 — Establish and maintain an incident response process | IG2 | `policies/04-incident-response/security_response_plan_policy.md` | End-to-end IR process: detection → containment → eradication → recovery |
+| 17.4 | IG2 | `policies/04-incident-response/ransomware_response_policy.md` | Ransomware-specific IR runbook: isolate, assess, contain, remediate |
 | 17.5 — Assign key roles and responsibilities | IG2 | `policies/04-incident-response/security_response_plan_policy.md` | RACI matrix for incident response activities |
 | 17.6 — Define mechanisms for communicating during incident response | IG2 | `policies/04-incident-response/data_breach_response_policy.md` | Communication protocols including out-of-band channels for major incidents |
 | 17.7 — Conduct routine incident response exercises | IG2 | `policies/04-incident-response/security_response_plan_policy.md` | Annual tabletop and quarterly review exercise requirements |

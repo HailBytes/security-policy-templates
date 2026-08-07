@@ -10,7 +10,7 @@ To establish specific procedures for detecting, containing, and recovering from 
 
 Applies to all systems, endpoints, servers, and cloud environments operated by [Company Name]. All employees, contractors, and vendors with system access are subject to this policy.
 
-## Ransomware Prevention Controls *(NIST CSF: PR.AC-4, PR.DS-1, PR.IP-12)*
+## Ransomware Prevention Controls *(NIST CSF: PR.AA-05, PR.DS-01, ID.RA-01)*
 
 ### 3.1 Backup Architecture
 
@@ -26,7 +26,7 @@ Applies to all systems, endpoints, servers, and cloud environments operated by [
 - Require multi-factor authentication for all remote access, VPN, and privileged accounts
 - Segment networks to limit lateral movement: endpoints, servers, OT/IoT, and guest should be on separate VLANs
 
-### 3.3 Detection Tuning *(NIST CSF: DE.CM-1, DE.CM-4)*
+### 3.3 Detection Tuning *(NIST CSF: DE.CM-01, DE.CM-09)*
 
 - Deploy endpoint detection and response (EDR) on all managed endpoints
 - Alert on mass file rename events, volume shadow copy deletion (`vssadmin delete shadows`), and unexpected encryption activity
@@ -35,7 +35,7 @@ Applies to all systems, endpoints, servers, and cloud environments operated by [
 
 ## Incident Response Procedures
 
-### 4.1 Detection and Initial Triage *(NIST CSF: DE.AE-1, DE.AE-2, RS.AN-1)*
+### 4.1 Detection and Initial Triage *(NIST CSF: DE.AE-01, DE.AE-02, RS.MA-02)*
 
 **Immediate Actions (0–30 minutes):**
 
@@ -44,7 +44,7 @@ Applies to all systems, endpoints, servers, and cloud environments operated by [
 - Notify [Security Officer] and activate the Incident Response Team per the Security Response Plan Policy
 - Record the exact time of discovery and the first affected system
 
-### 4.2 Containment *(NIST CSF: RS.RP-1, RS.MI-1, RS.MI-2)*
+### 4.2 Containment *(NIST CSF: RS.MA-01, RS.MA-01, RS.MA-02)*
 
 **Network Isolation (0–1 hour):**
 
@@ -61,7 +61,7 @@ Applies to all systems, endpoints, servers, and cloud environments operated by [
 - Identify the initial attack vector: phishing email, exposed RDP, compromised VPN credential, or vulnerable software
 - Assess whether data exfiltration occurred prior to encryption (double-extortion model); check firewall egress logs for large outbound transfers
 
-### 4.3 Notification Requirements *(NIST CSF: RS.CO-2, RS.CO-3)*
+### 4.3 Notification Requirements *(NIST CSF: RS.CO-02, RS.CO-03)*
 
 **Immediate internal notifications:**
 
@@ -75,7 +75,7 @@ Applies to all systems, endpoints, servers, and cloud environments operated by [
 - Affected customers or partners notified once scope is confirmed and legal counsel approves messaging
 - Law enforcement (FBI IC3 or local equivalent) — reporting does not obligate specific action and provides access to decryptors when available
 
-### 4.4 Ransom Decision Framework *(NIST CSF: RS.AN-4)*
+### 4.4 Ransom Decision Framework *(NIST CSF: RS.MA-03)*
 
 Paying a ransom is a legal and business decision, not a technical one. The following criteria guide evaluation:
 
@@ -89,7 +89,7 @@ Paying a ransom is a legal and business decision, not a technical one. The follo
 
 **Decision authority**: [Title/Role] (executive sponsor), with mandatory legal counsel sign-off. [Security Officer] documents the decision rationale regardless of outcome.
 
-### 4.5 Eradication and Recovery *(NIST CSF: RC.RP-1, RC.RP-2, RC.IM-1)*
+### 4.5 Eradication and Recovery *(NIST CSF: RC.RP-01, RC.RP-02, ID.IM-01)*
 
 **Eradication (before any restoration):**
 
@@ -114,13 +114,13 @@ Paying a ransom is a legal and business decision, not a technical one. The follo
 - [ ] Backup integrity confirmed for future recovery
 - [ ] Logging and alerting verified operational
 
-## Compliance and Enforcement *(NIST CSF: GV.PO-1)*
+## Compliance and Enforcement *(NIST CSF: GV.PO-01)*
 
 [Company Name] employees who fail to report suspected ransomware activity promptly, or who independently attempt to negotiate with attackers, may face disciplinary action up to and including termination. Deliberate interference with containment or recovery efforts will be treated as a serious policy violation.
 
 All personnel with privileged access must complete ransomware awareness training annually, including tabletop exercises simulating a ransomware event.
 
-## Post-Incident Review *(NIST CSF: RC.IM-2)*
+## Post-Incident Review *(NIST CSF: ID.IM-01)*
 
 A post-incident review must be completed within 14 days of recovery using the Post-Incident Review Template. At minimum, the review must cover:
 
@@ -137,7 +137,7 @@ Failure to report suspected ransomware activity immediately, interacting with an
 
 ## References
 
-- NIST CSF 2.0: PR.AC, PR.DS, DE.CM, DE.AE, RS.RP, RS.AN, RS.MI, RS.CO, RC.RP, RC.IM, GV.PO
+- NIST CSF 2.0: PR.AA, PR.DS, DE.CM, DE.AE, RS.MA, RS.CO, RC.RP, ID.IM, GV.PO
 - NIST SP 800-184: Guide for Cybersecurity Event Recovery
 - CISA Ransomware Guide (stopransomware.gov)
 - NoMoreRansom.org: Free decryptors for known ransomware variants

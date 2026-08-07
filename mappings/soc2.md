@@ -79,6 +79,7 @@ This file maps each policy template to the AICPA Trust Services Criteria used in
 | CC6.1: Logical access security measures | `policies/02-access-control/password_protection_policy.md` | MFA, password complexity, account provisioning/deprovisioning |
 | CC6.1 | `policies/01-governance/acceptable_use_policy.md` | Authorized use boundaries for system access |
 | CC6.2: Authentication prior to access | `policies/02-access-control/password_protection_policy.md` | Authentication requirements for all systems |
+| CC6.2 | `policies/02-access-control/multi_factor_authentication_policy.md` | MFA enrollment, verification, and exception management |
 | CC6.3: Role-based access and least privilege | `policies/02-access-control/password_protection_policy.md` | Role-based access provisioning and periodic review |
 | CC6.3 | `policies/05-infrastructure/server_security_policy.md` | Privileged access controls and admin account management |
 | CC6.4: Physical access restricted | `policies/02-access-control/clean_desk_policy.md` | Physical security controls for work areas and equipment |
@@ -101,9 +102,11 @@ This file maps each policy template to the AICPA Trust Services Criteria used in
 | CC7.2: System components monitored | `policies/05-infrastructure/server_security_policy.md` | Logging, SIEM integration, and alerting requirements |
 | CC7.2 | `policies/05-infrastructure/cloud_security_policy.md` | Cloud workload monitoring and threat detection |
 | CC7.3: Evaluation of security events | `policies/04-incident-response/security_response_plan_policy.md` | Security event triage, classification, and escalation |
+| CC7.3 | `policies/04-incident-response/ransomware_response_policy.md` | Ransomware event detection, triage, and classification |
 | CC7.4: Identification of and response to security incidents | `policies/04-incident-response/data_breach_response_policy.md` | Full breach detection and response lifecycle |
 | CC7.4 | `policies/04-incident-response/security_response_plan_policy.md` | Incident response procedures from detection to closure |
 | CC7.5: Identified security incidents addressed | `policies/04-incident-response/security_response_plan_policy.md` | Post-incident remediation and lessons-learned requirements |
+| CC7.5 | `policies/04-incident-response/ransomware_response_policy.md` | Ransomware recovery, decryption, and post-incident review |
 
 ---
 

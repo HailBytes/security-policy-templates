@@ -8,7 +8,7 @@ To establish procedures for detecting, analyzing, containing, and recovering fro
 ## Scope
 Applies to all cybersecurity incidents affecting company systems, data, or operations.
 
-## Incident Classification *(NIST CSF: DE.AE-2, RS.AN-2)*
+## Incident Classification *(NIST CSF: DE.AE-02, RS.MA-03)*
 
 ### Severity Levels:
 **Critical (Respond within 1 hour):**
@@ -31,7 +31,7 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Unsuccessful attack attempts
 - Minor security configuration issues
 
-## Response Team Structure *(NIST CSF: RS.CO-1)*
+## Response Team Structure *(NIST CSF: PR.AT-01)*
 
 ### Core Response Team:
 - **Incident Commander**: Overall incident management and decisions
@@ -48,21 +48,21 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 
 ## Response Procedures
 
-### 8.1 Detection and Reporting *(NIST CSF: DE.AE-1, DE.DP-4)*
+### 8.1 Detection and Reporting *(NIST CSF: DE.AE-01, DE.AE-06)*
 **Immediate Actions:**
 - Document incident details with timestamp
 - Classify incident severity level
 - Notify Security Response Team within time requirements
 - Preserve initial evidence and system state
 
-### 8.2 Initial Assessment *(NIST CSF: RS.AN-1, RS.AN-3)*
+### 8.2 Initial Assessment *(NIST CSF: RS.MA-02, RS.MA-03)*
 **Analysis Steps:**
 - Confirm incident scope and affected systems
 - Assess potential business impact
 - Determine if incident is ongoing or contained
 - Identify attack vectors and indicators of compromise
 
-### 8.3 Containment Strategy *(NIST CSF: RS.RP-1, RS.MI-2)*
+### 8.3 Containment Strategy *(NIST CSF: RS.MA-01, RS.MA-02)*
 **Short-term Containment:**
 - Isolate affected systems from network
 - Preserve evidence for analysis
@@ -75,7 +75,7 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Update monitoring and detection rules
 - Plan for system recovery
 
-### 8.4 Eradication and Recovery *(NIST CSF: RC.RP-1, RC.IM-1)*
+### 8.4 Eradication and Recovery *(NIST CSF: RC.RP-01, ID.IM-01)*
 **Eradication Steps:**
 - Remove malware and unauthorized access
 - Close security vulnerabilities
@@ -88,7 +88,7 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Monitor for recurring issues
 - Validate business operations
 
-## Communication Procedures *(NIST CSF: RS.CO-2, RS.CO-3)*
+## Communication Procedures *(NIST CSF: RS.CO-02, RS.CO-03)*
 
 ### Internal Communications:
 - Incident status updates every 4 hours during active response
@@ -102,13 +102,13 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 - Vendor/partner notifications as needed
 - Law enforcement reporting for criminal activity
 
-## Documentation Requirements *(NIST CSF: RS.AN-5, RC.IM-2)*
+## Documentation Requirements *(NIST CSF: ID.RA-08, ID.IM-01)*
 - Incident timeline and actions taken
 - Evidence collection and analysis results
 - Communication records and notifications
 - Lessons learned and improvement recommendations
 
-## Testing and Training *(NIST CSF: PR.IP-9, PR.AT-1)*
+## Testing and Training *(NIST CSF: RS.MA-01, PR.AT-01)*
 - Quarterly tabletop exercises
 - Annual full-scale incident simulation
 - Response team training and certification
@@ -118,7 +118,7 @@ Applies to all cybersecurity incidents affecting company systems, data, or opera
 Failure to report a security incident, failure to follow established response procedures, or unauthorized external disclosure of incident details before proper notification are policy violations. Violations must be reported to [Security Officer] and may result in disciplinary action up to and including termination.
 
 ## References
-- NIST CSF v1.1: DE (Detect), RS (Respond), RC (Recover)
+- NIST CSF 2.0: DE (Detect), RS (Respond), RC (Recover)
 
 ## Version History
 

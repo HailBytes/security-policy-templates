@@ -8,7 +8,7 @@ To establish security requirements for wireless networks and devices to protect 
 ## Scope
 Applies to all wireless networks, access points, and wireless-enabled devices used for business purposes.
 
-## Wireless Network Security *(NIST CSF: PR.AC-3, PR.DS-2)*
+## Wireless Network Security *(NIST CSF: PR.AA-03, PR.DS-02)*
 
 ### 10.1 Network Authentication and Encryption
 - Implement WPA3 encryption (WPA2 minimum acceptable)
@@ -17,14 +17,14 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Disable WPS (Wi-Fi Protected Setup) functionality
 - Implement certificate-based authentication where possible
 
-### 10.2 Network Segmentation *(NIST CSF: PR.AC-5, PR.DS-7)*
+### 10.2 Network Segmentation *(NIST CSF: PR.IR-01, PR.DS-07)*
 - Separate guest networks from business networks
 - Isolate IoT and personal devices on dedicated networks
 - Implement network access control (NAC) for device authentication
 - Configure firewall rules between wireless network segments
 - Monitor inter-network communications
 
-## Access Point Configuration *(NIST CSF: PR.PT-1, PR.IP-1)*
+## Access Point Configuration *(NIST CSF: PR.PS-04, PR.PS-01)*
 
 ### 10.3 Secure Configuration
 - Change default administrative credentials immediately
@@ -33,14 +33,14 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Enable MAC address filtering for high-security networks
 - Position access points to minimize signal outside business premises
 
-### 10.4 Access Point Management *(NIST CSF: PR.AC-1, PR.MA-2)*
+### 10.4 Access Point Management *(NIST CSF: PR.AA-01, PR.PS-02)*
 - Use centralized wireless management systems
 - Implement role-based administration
 - Enable encrypted management protocols (HTTPS, SSH)
 - Configure automatic session timeouts for administrative access
 - Maintain inventory of all wireless access points
 
-## Device Security *(NIST CSF: PR.AC-1, PR.DS-1)*
+## Device Security *(NIST CSF: PR.AA-01, PR.DS-01)*
 
 ### 10.5 Personal Device Usage (BYOD)
 - Require device registration and approval
@@ -56,7 +56,7 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Monitor device compliance with security policies
 - Maintain device inventory and ownership records
 
-## Monitoring and Detection *(NIST CSF: DE.CM-1, DE.AE-1)*
+## Monitoring and Detection *(NIST CSF: DE.CM-01, DE.AE-01)*
 
 ### 10.7 Wireless Security Monitoring
 - Implement wireless intrusion detection systems (WIDS)
@@ -65,14 +65,14 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Detect wireless network attacks and anomalies
 - Log and analyze wireless network traffic patterns
 
-### 10.8 Incident Response *(NIST CSF: DE.AE-2, RS.RP-1)*
+### 10.8 Incident Response *(NIST CSF: DE.AE-02, RS.MA-01)*
 - Establish procedures for wireless security incidents
 - Quarantine suspicious devices immediately
 - Investigate unauthorized network access attempts
 - Document security events and response actions
 - Update security configurations based on incident findings
 
-## Guest Network Management *(NIST CSF: PR.AC-4, PR.AC-6)*
+## Guest Network Management *(NIST CSF: PR.AA-05, PR.AA-02)*
 
 ### 10.9 Guest Access Controls
 - Implement time-limited guest access credentials
@@ -81,7 +81,7 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 - Monitor guest network usage and bandwidth
 - Provide guest access documentation and support
 
-## Compliance and Auditing *(NIST CSF: PR.IP-3, DE.CM-8)*
+## Compliance and Auditing *(NIST CSF: PR.PS-01, ID.RA-01)*
 
 ### 10.10 Wireless Security Assessment
 - Conduct quarterly wireless security assessments
@@ -94,7 +94,7 @@ Applies to all wireless networks, access points, and wireless-enabled devices us
 Using unapproved wireless networks to transmit company data, connecting unauthorized devices to company wireless infrastructure, or disabling required wireless security controls are policy violations. Violations must be reported to [Security Officer] and may result in network access suspension and disciplinary action up to and including termination.
 
 ## References
-- NIST CSF v1.1: PR.AC (Access Control), PR.DS (Data Security), PR.PT (Protective Technology), DE.CM (Security Continuous Monitoring)
+- NIST CSF 2.0: PR.AA (Access Control), PR.DS (Data Security), PR.PS (Protective Technology), DE.CM (Security Continuous Monitoring)
 
 ## Version History
 

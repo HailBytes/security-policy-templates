@@ -46,7 +46,6 @@ jobs:
             --it-contact "it@test.com" \
             --sec-officer "Jane Smith" \
             --review-date "2026-01-01" \
-            --department "IT" \
             --industry "Finance" \
             --title-role "IT Manager" \
             --legal-contact "legal@test.com" \
@@ -69,3 +68,25 @@ jobs:
           fi
 
           echo "All core policy placeholders replaced successfully."
+
+  csf20-compliance:
+    name: NIST CSF 2.0 compliance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for stale CSF 1.1-only codes (removed in CSF 2.0)
+        run: |
+          set -euo pipefail
+          # Codes that were removed from NIST CSF 2.0 (Feb 2024): ID.GV, ID.SC,
+          # ID.BE, PR.IP, PR.PT, PR.MA, and RS.RP/RS.AN-01..05 (renamed/merged
+          # into RS.MA). RS.AN-06+ survive in 2.0 and are NOT flagged.
+          # Also flag RC.IM/RS.IM which are author typos for ID.IM/RS.MA.
+          found=$(grep -rn --include="*.md" \
+            -E 'ID\.GV-[0-9]|ID\.SC-[0-9]|ID\.BE-[0-9]|PR\.IP-[0-9]|PR\.PT-[0-9]|PR\.MA-[0-9]|RS\.RP-[0-9]|RS\.MI-[0-9]|RS\.AN-0[1-5]|RC\.IM-|RS\.IM-' \
+            policies/ docs/ CONTRIBUTING.md 2>/dev/null || true)
+          if [[ -n "$found" ]]; then
+            echo "ERROR: Stale CSF 1.1-only codes still present (removed in CSF 2.0):"
+            echo "$found"
+            exit 1
+          fi
+          echo "All policy files use only CSF 2.0 codes."

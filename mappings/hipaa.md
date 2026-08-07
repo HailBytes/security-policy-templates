@@ -4,7 +4,7 @@ This file maps each policy template to specific requirements under the HIPAA Sec
 
 > **Scope note:** The HIPAA Security Rule applies to **electronic Protected Health Information (ePHI)** only. Covered Entities (CEs) and Business Associates (BAs) must comply with all Required specifications; Addressable specifications must either be implemented or documented with a compliant alternative. Policy documents establish administrative controls — you also need operational evidence (training records, access logs, risk analysis documentation, BAA registers). See the [Healthcare/HIPAA Industry Overlay](../industry-variants/healthcare-hipaa-overlay.md) for implementation guidance.
 
-> **Penalty reminder:** Violations range from $137 to $68,928 per violation (as of 2024 inflation adjustments), up to $2.07M per violation category per year. Willful neglect with no correction starts at $68,928 per violation.
+> **Penalty reminder:** HHS OCR's civil monetary penalty tiers (45 CFR § 160.404), effective January 28, 2026 per the latest Federal Register inflation adjustment, range from $145 (Tier 1 — no knowledge) to $73,011 per violation, up to $2,190,294 per violation category per year. Willful neglect with no correction (Tier 4) starts at $73,011 per violation and can reach the full $2,190,294 annual cap for a single category. Note: OCR's 2019 Notice of Enforcement Discretion caps annual totals lower for Tiers 1–3 ($25,000 / $100,000 / $250,000) — verify current OCR guidance before citing these figures in an audit deliverable, as amounts are re-adjusted for inflation annually.
 
 ---
 

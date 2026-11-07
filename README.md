@@ -193,6 +193,7 @@ Ready-to-use forms, checklists, and reporting templates that complement the poli
 - **[Implementation Checklist](templates/checklists/implementation_checklist.md)** - Track policy rollout tasks across all NIST CSF functions
 - **[Compliance Audit Checklist](templates/checklists/compliance_audit_checklist.md)** - Self-assessment checklist for periodic compliance reviews
 - **[Incident Response Checklist](templates/checklists/incident_response_checklist.md)** - Step-by-step actions to run during a live incident
+- **[RMM Technician Access Review Checklist](templates/checklists/rmm_technician_access_review.md)** - Review RMM identities, scope, privileged capabilities, authentication, approvals, exceptions, and remediation
 
 ### Incident Forms
 - **[Incident Report Template](templates/incident-forms/incident_report_template.md)** - Standard form for documenting a security incident

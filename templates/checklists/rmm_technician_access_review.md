@@ -146,7 +146,6 @@ Access that lacks an owner, business justification, required authentication cont
 - [NIST Cybersecurity Framework 2.0](https://doi.org/10.6028/NIST.CSWP.29), especially PR.AA-01, PR.AA-03, and PR.AA-05.
 - [NIST CSF 2.0 Implementation Examples](https://www.nist.gov/document/csf-20-implementations-pdf), including periodic privilege review, prompt revocation, least privilege, and separation of duties.
 - [CISA: Protecting Against Cyber Threats to Managed Service Providers and their Customers](https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-131a).
-- [Public 29-field RMM technician access review CSV](https://izikipizi.github.io/nizlo-msp-operations-resources/templates/rmm-technician-access-review.csv), maintained by Kip Ecklund and Nizlo and provided without an account or email gate.
 
 ## Version History
 

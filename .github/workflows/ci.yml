@@ -3,7 +3,13 @@ name: CI
 on:
   push:
     branches: [main]
+    paths-ignore: ["**.jpg", "**.png", "LICENSE"]
   pull_request:
+    paths-ignore: ["**.jpg", "**.png", "LICENSE"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
